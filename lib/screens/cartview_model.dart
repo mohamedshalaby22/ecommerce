@@ -15,17 +15,14 @@ class CartViewModel extends GetxController {
   //هنا هعمل ميثود تجيب الداتا كلها من الداتابيز
   getAllProducts() async {
     _loading.value = true;
-
-    var dbHelper = CartDatabaseHelper.db;
-    _cartModel = await dbHelper.getAllproducts();
-    print(cartModel.length);
+    _cartModel = await CartDatabaseHelper.getAllproducts();
     _loading.value = false;
+    update();
   }
 
   //هنا هعمل فانكشن لم بدوس علي زرار الادد بتودي المنتج للكارت سكرين
   addProduct(CartModel cartModel) async {
-    var dbHelper = CartDatabaseHelper.db;
-    await dbHelper.insert(cartModel);
+    await CartDatabaseHelper.insert(cartModel);
     update();
   }
 
