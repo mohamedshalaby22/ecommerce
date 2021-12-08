@@ -20,6 +20,7 @@ class CartViewModel extends GetxController {
     _loading.value = true;
     _cartModel = await CartDatabaseHelper.getAllproducts();
     _loading.value = false;
+
     getTotalPrice();
     update();
   }
@@ -33,6 +34,8 @@ class CartViewModel extends GetxController {
       //print(_totalPrice);
       update();
     }
+
+    update();
   }
 
   //هنا هعمل فانكشن لم بدوس علي زرار الادد بتودي المنتج للكارت سكرين
@@ -48,6 +51,8 @@ class CartViewModel extends GetxController {
     await CartDatabaseHelper.insert(cartModel);
     _cartModel.add(cartModel);
     _totalPrice += (double.parse(cartModel.price) * cartModel.quanity);
+
+    await CartDatabaseHelper.insert(cartModel);
 
     update();
   }

@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_overrides, non_constant_identifier_names, avoid_print, prefer_typing_uninitialized_variables, unused_element
 
 import 'package:ecommerce/fire_store.dart';
-import 'package:ecommerce/layout.dart';
+import 'package:ecommerce/storage_data.dart';
 import 'package:ecommerce/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,12 +9,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import 'controller_view.dart';
+
 class AuthViewModel extends GetxController {
- 
   GoogleSignIn googleSignIn = GoogleSignIn(scopes: ['email']);
   FirebaseAuth auth = FirebaseAuth.instance;
   String? email, password, name;
-
+  late final LocalStroageData localStroageData = Get.find();
   final Rxn<User> _user = Rxn<User>();
   //هنا عشان لو اليوزر له قيمه يعرضها ملوش يحوله يعمل ايميل
   String? get user => _user.value?.email;
@@ -49,14 +50,21 @@ class AuthViewModel extends GetxController {
     );
     await auth.signInWithCredential(credential).then((user) {
       saveUser(user);
-      Get.offAll(const LayoutScreen());
+      Get.offAll(const ControllerView());
     });
   }
 
   void signInWithEmailAndPassword() async {
     try {
-      await auth.signInWithEmailAndPassword(email: email!, password: password!);
-      Get.offAll(const LayoutScreen());
+      await auth
+          .signInWithEmailAndPassword(email: email!, password: password!)
+          .then((value) async {
+        //بجيب الداتا وبحفظها في الشيرد
+        await FireStoreUser().getCurrentUser(value.user!.uid);
+      }).then((value) {
+        //setUser(UserModel.fromJson(value));
+      });
+      Get.offAll(const ControllerView());
     } on FirebaseException catch (e) {
       print(e.message);
       Get.snackbar(
@@ -77,7 +85,7 @@ class AuthViewModel extends GetxController {
         saveUser(user);
       });
 
-      Get.offAll(const LayoutScreen());
+      Get.offAll(const ControllerView());
     } on FirebaseException catch (e) {
       print(e.message);
       Get.snackbar(
@@ -90,13 +98,17 @@ class AuthViewModel extends GetxController {
   }
 
   void saveUser(UserCredential user) async {
-    await FireStoreUser().addUserToFireStore(UserModel(
+    UserModel userModel = UserModel(
       email: user.user!.email,
       userId: user.user!.uid,
       name: name ?? user.user!.displayName,
       pic: '',
-    ));
+    );
+    await FireStoreUser().addUserToFireStore(userModel);
+    setUser(userModel);
   }
 
-  
+  void setUser(UserModel userModel) async {
+    await localStroageData.setUser(userModel);
+  }
 }

@@ -30,7 +30,7 @@ class CarScreen extends StatelessWidget {
                                       ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(15),
-                                          child: Container(
+                                          child: SizedBox(
                                             height: 200,
                                             child: Image.network(controller
                                                 .cartModel[index].image),

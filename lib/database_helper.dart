@@ -1,7 +1,6 @@
 // ignore_for_file: unnecessary_null_comparison
 
 import 'package:ecommerce/screens/cart_model.dart';
-import 'package:ecommerce/screens/products.dart';
 import 'package:ecommerce/strings.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
