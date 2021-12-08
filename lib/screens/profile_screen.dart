@@ -16,8 +16,8 @@ class ProfileScreen extends StatelessWidget {
       builder: (controller) => Center(
         child: Container(
           child: InkWell(
-            onTap: () {
-              controller.signOut();
+            onTap: () async {
+              await controller.signOut();
               Get.offAll(HomeScreen());
             },
             child: const Text(

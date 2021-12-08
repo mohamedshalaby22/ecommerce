@@ -1,5 +1,7 @@
 // ignore_for_file: unnecessary_overrides, non_constant_identifier_names, avoid_print, prefer_typing_uninitialized_variables, unused_element
 
+import 'dart:convert';
+
 import 'package:ecommerce/fire_store.dart';
 import 'package:ecommerce/storage_data.dart';
 import 'package:ecommerce/user_model.dart';
@@ -60,11 +62,11 @@ class AuthViewModel extends GetxController {
           .signInWithEmailAndPassword(email: email!, password: password!)
           .then((value) async {
         //بجيب الداتا وبحفظها في الشيرد
-        await FireStoreUser().getCurrentUser(value.user!.uid);
-      }).then((value) {
-        //setUser(UserModel.fromJson(value));
+        await FireStoreUser().getCurrentUser(value.user!.uid).then((value) {
+          setUser(UserModel.fromJson(value.data() as Map<String, dynamic>));
+          Get.offAll(() => const ControllerView());
+        });
       });
-      Get.offAll(const ControllerView());
     } on FirebaseException catch (e) {
       print(e.message);
       Get.snackbar(
