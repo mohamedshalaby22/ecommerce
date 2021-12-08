@@ -1,6 +1,7 @@
 import 'package:ecommerce/getx.dart';
 import 'package:ecommerce/home_bottom.dart';
 import 'package:ecommerce/screens/cartview_model.dart';
+import 'package:ecommerce/storage_data.dart';
 
 import 'package:get/get.dart';
 
@@ -13,5 +14,6 @@ class Binding extends Bindings {
     Get.lazyPut(() => HomeBottom());
     Get.lazyPut(() => ExploreViewModel());
     Get.lazyPut(() => CartViewModel());
+    Get.lazyPut(() => LocalStroageData());
   }
 }

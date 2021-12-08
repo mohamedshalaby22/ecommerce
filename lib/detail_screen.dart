@@ -190,6 +190,7 @@ class DetailScreen extends StatelessWidget {
                                     print('===========');
                                     controller.addProduct(
                                       CartModel(
+                                          productId: model.productId,
                                           name: model.name,
                                           price: model.price,
                                           quanity: 1,

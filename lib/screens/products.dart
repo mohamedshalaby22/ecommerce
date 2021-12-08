@@ -4,7 +4,7 @@ import 'package:ecommerce/screens/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProductsModel {
-  late String name, image, description, size, price;
+  late String name, productId, image, description, size, price;
   late Color color;
   ProductsModel(
       {required this.name,
@@ -12,6 +12,7 @@ class ProductsModel {
       required this.description,
       required this.color,
       required this.size,
+      required this.productId,
       required this.price});
   ProductsModel.fromJson(Map<dynamic, dynamic> map) {
     if (map == null) {
@@ -23,6 +24,7 @@ class ProductsModel {
     color = HexColor.fromHex(map['color']);
     size = map['size'];
     price = map['price'];
+    productId = map['productId'];
   }
   toJson() {
     return {
@@ -32,6 +34,7 @@ class ProductsModel {
       "color": color,
       "size": size,
       "price": price,
+      "productId": productId,
     };
   }
 }

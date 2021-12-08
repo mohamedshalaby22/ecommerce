@@ -1,5 +1,6 @@
 import 'package:ecommerce/controller_view.dart';
 import 'package:ecommerce/database_helper.dart';
+import 'package:ecommerce/screens/cartview_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/binding.dart';
@@ -9,6 +10,7 @@ import 'package:get/get.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CartDatabaseHelper.initDb();
+  Get.put(CartViewModel());
   await Firebase.initializeApp();
   runApp(const MyApp());
 }

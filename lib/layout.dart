@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LayoutScreen extends StatelessWidget {
-  const LayoutScreen ({Key? key}) : super(key: key);
+  const LayoutScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

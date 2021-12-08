@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison
 
 import 'package:ecommerce/screens/cart_model.dart';
+import 'package:ecommerce/screens/products.dart';
 import 'package:ecommerce/strings.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -10,34 +11,34 @@ class CartDatabaseHelper {
   CartDatabaseHelper._();
   static CartDatabaseHelper db = CartDatabaseHelper._();
   static Database? _database;
-  Future<Database?> get database async {
+  static Future<Database?> get database async {
     if (_database != null) return _database;
 
-    _database = await initDb();
+    await initDb();
 
     return _database;
   }
 
 //هنا بكريت الداتا
   static Future initDb() async {
-    String path = join(await getDatabasesPath(), 'CartProduct.db');
-    return await openDatabase(path, version: 1,
+    String path = join(await getDatabasesPath(), '$tableCartProduct.db');
+    _database = await openDatabase(path, version: 1,
         onCreate: (Database db, int version) async {
       await db.execute('''  
       CREATE TABLE $tableCartProduct(
-        $columnName TEXT
-        $columnImage TEXT
-       $columnPrice TEXT
+        $columnName TEXT ,
+        $columnImage TEXT ,
+        $columnPrice TEXT ,
+        $columnProductId TEXT ,
         $columnQuanity INTEGER
-       
-        
-      )
+        )
       ''');
     });
   }
   //هجيب كل الداتا من الكارت برودجت
+  //بضيفها من صفحه الديتال
 
-  Future<List<CartModel>> getAllproducts() async {
+  static Future<List<CartModel>> getAllproducts() async {
     var dbClient = await database;
 
     List<Map> maps = await dbClient!.query(tableCartProduct);
@@ -48,9 +49,15 @@ class CartDatabaseHelper {
   }
 
   //هنا بعمل انسرت للداتا
-  insert(CartModel model) async {
+  static insert(CartModel model) async {
     var dbClient = await database;
     await dbClient!.insert(tableCartProduct, model.toJson(),
         conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  updateProduct(CartModel model) async {
+    var dbClient = await database;
+    return await dbClient!.update(tableCartProduct, model.toJson(),
+        where: '$columnProductId=?', whereArgs: [model.productId]);
   }
 }
