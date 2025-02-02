@@ -1,0 +1,39 @@
+import 'package:ecommerce/core/helpers/spacing.dart';
+import 'package:ecommerce/core/theming/styles.dart';
+import 'package:ecommerce/core/widgets/app_text_button.dart';
+import 'package:ecommerce/features/Auth/login/ui/widgets/forgot_password/reset_password_form.dart';
+import 'package:flutter/material.dart';
+
+class ForgotPasswordScreenContent extends StatelessWidget {
+  const ForgotPasswordScreenContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(35),
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            verticalSpace(10),
+            Text(
+              'Reset new password',
+              style: TextStyles.font18lackSemiBold,
+            ),
+            verticalSpace(20),
+            const ResetPasswordForm(),
+            verticalSpace(20),
+            AppTextButton(buttonText: 'Reset password', onPressed: () {}),
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -26,14 +26,14 @@ class AppTextButton extends StatelessWidget {
           backgroundColor: backgroundColor ?? ColorsManager.mainBlue,
           shape: RoundedRectangleBorder(
               side: BorderSide(
-                  color: borderColor ?? Colors.transparent, width: 0.6),
-              borderRadius: BorderRadius.circular(borderRadius ?? 8)),
+                  color: borderColor ?? Colors.transparent, width: 0.8),
+              borderRadius: BorderRadius.circular(borderRadius ?? 35)),
           minimumSize: Size(buttonWidth ?? double.infinity, buttonHeight ?? 56),
         ),
         onPressed: onPressed,
         child: Text(
           buttonText,
-          style: textStyle ?? TextStyles.font28MainBlueBold,
+          style: textStyle ?? TextStyles.font16WhiteMedium,
         ));
   }
 }

@@ -45,5 +45,37 @@ class Assets {
   /// Assets for imagesSplashAndroid12
   /// assets/images/splash_android12.png
   static const String imagesSplashAndroid12 = "assets/images/splash_android12.png";
+
+  /// Assets for svgsApple
+  /// assets/svgs/apple.svg
+  static const String svgsApple = "assets/svgs/apple.svg";
+
+  /// Assets for svgsEmail
+  /// assets/svgs/email.svg
+  static const String svgsEmail = "assets/svgs/email.svg";
+
+  /// Assets for svgsEyeClosed
+  /// assets/svgs/eye-closed.svg
+  static const String svgsEyeClosed = "assets/svgs/eye-closed.svg";
+
+  /// Assets for svgsEyeOpen
+  /// assets/svgs/eye-open.svg
+  static const String svgsEyeOpen = "assets/svgs/eye-open.svg";
+
+  /// Assets for svgsGermanFlag
+  /// assets/svgs/german-flag.svg
+  static const String svgsGermanFlag = "assets/svgs/german-flag.svg";
+
+  /// Assets for svgsGoogle
+  /// assets/svgs/google.svg
+  static const String svgsGoogle = "assets/svgs/google.svg";
+
+  /// Assets for svgsLock
+  /// assets/svgs/lock.svg
+  static const String svgsLock = "assets/svgs/lock.svg";
+
+  /// Assets for svgsUser
+  /// assets/svgs/user.svg
+  static const String svgsUser = "assets/svgs/user.svg";
 }
 

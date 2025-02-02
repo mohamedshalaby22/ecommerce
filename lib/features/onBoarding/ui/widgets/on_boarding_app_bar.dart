@@ -7,8 +7,8 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
       {super.key,
       required this.isShowBackIcon,
       required this.onBack,
-      required this.onSkip});
-  final bool isShowBackIcon;
+      required this.onSkip, required this.isSkip});
+  final bool isShowBackIcon,isSkip;
   final VoidCallback onBack, onSkip;
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: TextButton(
               onPressed: onSkip,
               child: Text(
-                'SKIP',
+               isSkip? 'SKIP':'CONTINUE',
                 style: TextStyles.font18MainGreenSemiBold,
               )),
         )

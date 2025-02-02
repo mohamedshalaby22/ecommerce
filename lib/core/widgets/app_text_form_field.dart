@@ -28,7 +28,7 @@ class AppTextFormField extends StatelessWidget {
   final Color? backgroundColor;
   final TextStyle? hintStyle, textStyle;
   final bool? isObscureText;
-  final Widget? suffixIcon,prefixIcon;
+  final Widget? suffixIcon, prefixIcon;
   final int? maxLines;
   final List<TextInputFormatter>? inputFormatters;
   final TextInputType? textInputType;
@@ -41,7 +41,7 @@ class AppTextFormField extends StatelessWidget {
       validator: (value) {
         return validator(value);
       },
-      style: textStyle ?? TextStyles.font28MainBlueBold,
+      style: textStyle ?? TextStyles.font13BlackMedium,
       obscureText: isObscureText ?? false,
       cursorColor: ColorsManager.mainBlue,
       maxLines: maxLines ?? 1,
@@ -50,16 +50,16 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
-            EdgeInsets.symmetric(horizontal: 10.w, vertical: 12.h),
+            EdgeInsets.symmetric(horizontal: 15.w, vertical: 12.h),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
                 borderRadius: BorderRadius.circular(6),
                 borderSide: const BorderSide(
-                    color: ColorsManager.mainBlue, width: 1.1)),
+                    color: ColorsManager.mainGreen, width: 1.1)),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
             borderSide:
-                const BorderSide(color: ColorsManager.mainBlue, width: 1.1)),
+                const BorderSide(color: Colors.grey, width: 1.1)),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
             borderSide: const BorderSide(color: Colors.red, width: 1.1)),
@@ -68,10 +68,10 @@ class AppTextFormField extends StatelessWidget {
             borderSide: const BorderSide(color: Colors.red, width: 1.1)),
         suffixIcon: suffixIcon ?? const SizedBox(),
         prefixIcon: prefixIcon,
-        hintStyle: hintStyle ?? TextStyles.font28MainBlueBold,
+        hintStyle: hintStyle ?? TextStyles.font13GreyMedium,
         hintText: hintText,
         filled: true,
-        fillColor:  Colors.white,
+        fillColor: Colors.white,
       ),
     );
   }

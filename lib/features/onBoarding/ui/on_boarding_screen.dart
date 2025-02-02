@@ -1,6 +1,9 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
+import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/features/onBoarding/ui/widgets/on_boarding_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'widgets/on_boarding_page_view.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -18,8 +21,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return Scaffold(
       appBar: OnBoardingAppBar(
         isShowBackIcon: currentPage != 0,
-        onBack:onBack,
-        onSkip:onSkip,
+        onBack: onBack,
+        onSkip: onSkip, isSkip: currentPage != 3,
       ),
       body: SafeArea(
         child: Column(
@@ -36,7 +39,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 },
               ),
             ),
-             verticalSpace(10),
+            verticalSpace(10),
           ],
         ),
       ),
@@ -50,11 +53,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 
   void onSkip() {
-    _pageController.animateToPage(3,
-        duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    if (currentPage == 3) {
+      context.pushReplacementNamed(Routes.loginScreen);
+    } else {
+      _pageController.animateToPage(3,
+          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    }
+    HapticFeedback.selectionClick();
   }
-  void onBack() { 
+
+  void onBack() {
     _pageController.animateToPage(currentPage - 1,
         duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    HapticFeedback.selectionClick();
   }
 }

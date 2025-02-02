@@ -1,6 +1,9 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
+import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/features/onBoarding/ui/widgets/on_boarding_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'on_boarding_pages.dart';
 
 // ignore: must_be_immutable
@@ -52,7 +55,10 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
               widget.pageController.animateToPage(widget.currentPage + 1,
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.ease);
+            } else {
+              context.pushReplacementNamed(Routes.loginScreen);
             }
+            HapticFeedback.selectionClick();
           },
         ),
       ],
