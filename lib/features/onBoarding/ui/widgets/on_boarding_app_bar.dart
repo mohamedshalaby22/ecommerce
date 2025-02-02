@@ -1,0 +1,43 @@
+import 'package:ecommerce/core/theming/styles.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const OnBoardingAppBar(
+      {super.key,
+      required this.isShowBackIcon,
+      required this.onBack,
+      required this.onSkip});
+  final bool isShowBackIcon;
+  final VoidCallback onBack, onSkip;
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      elevation: 0.0,
+      backgroundColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+      automaticallyImplyLeading: false,
+      leading: isShowBackIcon
+          ? IconButton(
+              onPressed: onBack,
+              icon: const Icon(Icons.arrow_back),
+              color: Colors.black,
+            )
+          : null,
+      actions: [
+        Padding(
+          padding: EdgeInsetsDirectional.only(end: 10.w),
+          child: TextButton(
+              onPressed: onSkip,
+              child: Text(
+                'SKIP',
+                style: TextStyles.font18MainGreenSemiBold,
+              )),
+        )
+      ],
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
