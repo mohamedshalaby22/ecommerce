@@ -6,14 +6,14 @@ import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/helpers/app_regex.dart';
 import 'password_validations.dart';
 
-class ResetPasswordForm extends StatefulWidget {
-  const ResetPasswordForm({super.key});
+class ForgotPasswordForm extends StatefulWidget {
+  const ForgotPasswordForm({super.key});
 
   @override
-  State<ResetPasswordForm> createState() => _ResetPasswordFormState();
+  State<ForgotPasswordForm> createState() => _ForgotPasswordFormState();
 }
 
-class _ResetPasswordFormState extends State<ResetPasswordForm> {
+class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
   bool isPasswordObscureText = true;
   bool isPasswordConfirmationObscureText = true;
   TextEditingController passwordController = TextEditingController();

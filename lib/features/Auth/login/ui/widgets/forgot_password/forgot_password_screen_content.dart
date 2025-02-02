@@ -1,8 +1,8 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:ecommerce/core/widgets/app_text_button.dart';
-import 'package:ecommerce/features/Auth/login/ui/widgets/forgot_password/reset_password_form.dart';
 import 'package:flutter/material.dart';
+import 'forgot_password_form.dart';
 
 class ForgotPasswordScreenContent extends StatelessWidget {
   const ForgotPasswordScreenContent({super.key});
@@ -28,7 +28,7 @@ class ForgotPasswordScreenContent extends StatelessWidget {
               style: TextStyles.font18lackSemiBold,
             ),
             verticalSpace(20),
-            const ResetPasswordForm(),
+            const ForgotPasswordForm(),
             verticalSpace(20),
             AppTextButton(buttonText: 'Reset password', onPressed: () {}),
           ],
