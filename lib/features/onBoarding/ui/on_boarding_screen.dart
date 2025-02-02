@@ -53,7 +53,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     _pageController.animateToPage(3,
         duration: const Duration(milliseconds: 500), curve: Curves.ease);
   }
-  void onBack() {
+  void onBack() { 
     _pageController.animateToPage(currentPage - 1,
         duration: const Duration(milliseconds: 500), curve: Curves.ease);
   }
