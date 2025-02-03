@@ -10,12 +10,10 @@ class LoginOptionsRow extends StatefulWidget {
   const LoginOptionsRow({super.key});
 
   @override
-  State<LoginOptionsRow> createState() =>
-      _LoginOptionsRowState();
+  State<LoginOptionsRow> createState() => _LoginOptionsRowState();
 }
 
-class _LoginOptionsRowState
-    extends State<LoginOptionsRow> {
+class _LoginOptionsRowState extends State<LoginOptionsRow> {
   bool _isKeepLoggedIn = false;
 
   void _toggleKeepLoggedIn() {

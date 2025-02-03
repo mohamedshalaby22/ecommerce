@@ -14,10 +14,10 @@ class EcommerceApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.onboardingScreen,
+        initialRoute: Routes.mainNavigationBar,
         onGenerateRoute: appRouter.generteRouter,
         theme: ThemeData(
-          scaffoldBackgroundColor: const Color(0xffFAFAFA),
+          scaffoldBackgroundColor:  Colors.white,
           appBarTheme: const AppBarTheme(
             elevation: 0.0,
             systemOverlayStyle: SystemUiOverlayStyle(

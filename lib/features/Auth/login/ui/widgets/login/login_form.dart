@@ -13,8 +13,7 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  
-bool isPasswordObscureText = true;
+  bool isPasswordObscureText = true;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,44 +30,41 @@ bool isPasswordObscureText = true;
           validator: (value) {},
         ),
         verticalSpace(15),
-       AppTextFormField(
-            isObscureText: isPasswordObscureText,
-            hintText: 'Password',
-            prefixIcon: Padding(
+        AppTextFormField(
+          isObscureText: isPasswordObscureText,
+          hintText: 'Password',
+          prefixIcon: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: SvgPicture.asset(
+              Assets.svgsLock,
+              fit: BoxFit.contain,
+            ),
+          ),
+          suffixIcon: GestureDetector(
+            onTap: () {
+              setState(() {
+                isPasswordObscureText = !isPasswordObscureText;
+              });
+            },
+            child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: SvgPicture.asset(
-                Assets.svgsLock,
+                isPasswordObscureText
+                    ? Assets.svgsEyeClosed
+                    : Assets.svgsEyeOpen,
                 fit: BoxFit.contain,
               ),
             ),
-            suffixIcon: GestureDetector(
-              onTap: () {
-                setState(() {
-                  isPasswordObscureText = !isPasswordObscureText;
-                });
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: SvgPicture.asset(
-                  isPasswordObscureText
-                      ? Assets.svgsEyeClosed
-                      : Assets.svgsEyeOpen,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter a valid password';
-              }
-            },
           ),
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Please enter a valid password';
+            }
+          },
+        ),
         verticalSpace(20),
-       const LoginOptionsRow(),
+        const LoginOptionsRow(),
       ],
     );
   }
-
-  
-  
 }

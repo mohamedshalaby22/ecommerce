@@ -1,5 +1,7 @@
 import 'package:ecommerce/core/constants/app_images.dart';
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
+import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/core/theming/colors.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:ecommerce/core/widgets/app_text_button.dart';
@@ -32,7 +34,6 @@ class _LoginScreenContentState extends State<LoginScreenContent> {
           ),
         ),
         child: SingleChildScrollView(
-
           child: Column(
             children: [
               verticalSpace(10),
@@ -49,7 +50,9 @@ class _LoginScreenContentState extends State<LoginScreenContent> {
                   children: [
                     const LoginForm(),
                     verticalSpace(25),
-                    AppTextButton(buttonText: 'Login', onPressed: () {}),
+                    AppTextButton(buttonText: 'Login', onPressed: () {
+                      context.pushNamed(Routes.otpScreen);
+                    }),
                     verticalSpace(20),
                     AppTextButton(
                       backgroundColor: Colors.transparent,
@@ -84,5 +87,4 @@ class _LoginScreenContentState extends State<LoginScreenContent> {
       ),
     );
   }
-
 }

@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesArrivalChair
+  /// assets/images/arrival_chair.png
+  static const String imagesArrivalChair = "assets/images/arrival_chair.png";
+
   /// Assets for imagesChair
   /// assets/images/chair.png
   static const String imagesChair = "assets/images/chair.png";
@@ -9,6 +13,10 @@ class Assets {
   /// Assets for imagesChairLine
   /// assets/images/chair_line.png
   static const String imagesChairLine = "assets/images/chair_line.png";
+
+  /// Assets for imagesHomeBanner
+  /// assets/images/home_banner.png
+  static const String imagesHomeBanner = "assets/images/home_banner.png";
 
   /// Assets for imagesOnBoardingImage1
   /// assets/images/on_boarding_image1.png
@@ -38,6 +46,14 @@ class Assets {
   /// assets/images/on_boarding_image7.png
   static const String imagesOnBoardingImage7 = "assets/images/on_boarding_image7.png";
 
+  /// Assets for imagesOtpImage
+  /// assets/images/otp_image.png
+  static const String imagesOtpImage = "assets/images/otp_image.png";
+
+  /// Assets for imagesRoom
+  /// assets/images/room.png
+  static const String imagesRoom = "assets/images/room.png";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";
@@ -49,6 +65,22 @@ class Assets {
   /// Assets for svgsApple
   /// assets/svgs/apple.svg
   static const String svgsApple = "assets/svgs/apple.svg";
+
+  /// Assets for svgsBed
+  /// assets/svgs/bed.svg
+  static const String svgsBed = "assets/svgs/bed.svg";
+
+  /// Assets for svgsChair
+  /// assets/svgs/chair.svg
+  static const String svgsChair = "assets/svgs/chair.svg";
+
+  /// Assets for svgsCupboard
+  /// assets/svgs/cupboard.svg
+  static const String svgsCupboard = "assets/svgs/cupboard.svg";
+
+  /// Assets for svgsDining
+  /// assets/svgs/dining.svg
+  static const String svgsDining = "assets/svgs/dining.svg";
 
   /// Assets for svgsEmail
   /// assets/svgs/email.svg
@@ -70,12 +102,36 @@ class Assets {
   /// assets/svgs/google.svg
   static const String svgsGoogle = "assets/svgs/google.svg";
 
+  /// Assets for svgsHeartFill
+  /// assets/svgs/heart-fill.svg
+  static const String svgsHeartFill = "assets/svgs/heart-fill.svg";
+
+  /// Assets for svgsHeartOutline
+  /// assets/svgs/heart-outline.svg
+  static const String svgsHeartOutline = "assets/svgs/heart-outline.svg";
+
+  /// Assets for svgsLamb
+  /// assets/svgs/lamb.svg
+  static const String svgsLamb = "assets/svgs/lamb.svg";
+
   /// Assets for svgsLock
   /// assets/svgs/lock.svg
   static const String svgsLock = "assets/svgs/lock.svg";
 
+  /// Assets for svgsSofa
+  /// assets/svgs/sofa.svg
+  static const String svgsSofa = "assets/svgs/sofa.svg";
+
+  /// Assets for svgsTvTable
+  /// assets/svgs/tv-table.svg
+  static const String svgsTvTable = "assets/svgs/tv-table.svg";
+
   /// Assets for svgsUser
   /// assets/svgs/user.svg
   static const String svgsUser = "assets/svgs/user.svg";
+
+  /// Assets for svgsVase
+  /// assets/svgs/vase.svg
+  static const String svgsVase = "assets/svgs/vase.svg";
 }
 
