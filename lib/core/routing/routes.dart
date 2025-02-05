@@ -4,8 +4,7 @@ class Routes {
   static const String forgotPasswordScreen = '/forgotPasswordScreen';
   static const String otpScreen = '/otpScreen';
   static const String mainNavigationBar = '/mainNavigationBar';
-  // static const String homeScreen = '/homeScreen'; 
-  // static const String categoriesScreen = '/categoriesScreen';
+  static const String categoriesScreen = '/categoriesScreen';
   // static const String favouriteScreen = '/favouriteScreen';
   // static const String cartScreen = '/cartScreen';
   // static const String checkoutScreen = '/checkoutScreen';

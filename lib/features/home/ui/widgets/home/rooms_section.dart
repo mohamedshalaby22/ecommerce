@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_images.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/styles.dart';
 
 class RoomsSection extends StatelessWidget {
   const RoomsSection({super.key});
@@ -29,7 +29,7 @@ class RoomsSection extends StatelessWidget {
             ),
           ),
         ),
-        verticalSpace(50),
+       
       ],
     );
   }

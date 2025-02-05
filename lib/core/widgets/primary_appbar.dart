@@ -20,7 +20,9 @@ class SecondaryAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: GestureDetector(
         onTap: onBackPressed ?? Navigator.of(context).pop,
         child: const HugeIcon(
-            icon: HugeIcons.strokeRoundedArrowLeft01, color: Colors.black),
+          icon: HugeIcons.strokeRoundedArrowLeft01,
+          color: Colors.black,
+        ),
       ),
       title: Text(
         title,

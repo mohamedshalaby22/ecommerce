@@ -1,11 +1,13 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
-import 'package:ecommerce/features/home/ui/widgets/categories_section.dart';
+import 'package:ecommerce/features/home/ui/widgets/home/categories_section.dart';
+import 'package:ecommerce/features/home/ui/widgets/home/featured_products_section.dart';
 import 'package:flutter/material.dart';
-import 'widgets/home_appbar.dart';
-import 'widgets/banner_slider.dart';
-import 'widgets/new_arrival_section.dart';
-import 'widgets/rooms_section.dart';
-import 'widgets/select_location_card.dart';
+import '../widgets/home/best_seller_section.dart';
+import '../widgets/home/home_appbar.dart';
+import '../widgets/home/banner_slider.dart';
+import '../widgets/home/new_arrival_section.dart';
+import '../widgets/home/rooms_section.dart';
+import '../widgets/home/select_location_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,11 +28,15 @@ class HomeScreen extends StatelessWidget {
               verticalSpace(25),
               const BannerSlider(),
               verticalSpace(30),
-              CategoriesSection(),
+             const CategoriesSection(),
               verticalSpace(25),
               const NewArrivalsSection(),
               verticalSpace(15),
               const RoomsSection(),
+              verticalSpace(25),
+              const BestSellerSection(),
+              verticalSpace(25),
+              const FeaturedProductsSection(),
             ],
           ),
         ),

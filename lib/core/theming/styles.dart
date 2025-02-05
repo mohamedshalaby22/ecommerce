@@ -42,6 +42,12 @@ class TextStyles {
       decorationColor: ColorsManager.mainGreen,
       fontWeight: FontWeightHelper.semiBold,
       fontFamily: AppConstants.appFontFamily);
+  static TextStyle font12GreyRegular = TextStyle(
+      fontSize: 12.sp,
+      color: Colors.grey,
+     
+      fontWeight: FontWeightHelper.regular,
+      fontFamily: AppConstants.appFontFamily);
   static TextStyle font12MainGreenRegular = TextStyle(
       fontSize: 12.sp,
       color: ColorsManager.mainGreen,
@@ -51,6 +57,11 @@ class TextStyles {
       fontSize: 12.sp,
       color: Colors.black,
       fontWeight: FontWeightHelper.regular,
+      fontFamily: AppConstants.appFontFamily);
+  static TextStyle font12BlackSemiBold = TextStyle(
+      fontSize: 12.sp,
+      color: Colors.black,
+      fontWeight: FontWeightHelper.semiBold,
       fontFamily: AppConstants.appFontFamily);
   static TextStyle font20BlackSemiBold = TextStyle(
       fontSize: 20.sp,

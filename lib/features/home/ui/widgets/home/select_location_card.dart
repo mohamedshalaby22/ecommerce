@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../../core/theming/colors.dart';
+import '../../../../../core/theming/styles.dart';
 
 class SelectLocationCard extends StatelessWidget {
   const SelectLocationCard({super.key});

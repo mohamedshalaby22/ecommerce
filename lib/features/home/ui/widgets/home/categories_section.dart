@@ -1,21 +1,15 @@
-import 'package:ecommerce/core/constants/app_images.dart';
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
+import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../data/utils/categories_images.dart';
+
 class CategoriesSection extends StatelessWidget {
-  CategoriesSection({super.key});
-  final List<String> _catergoryImages = [
-    Assets.svgsSofa,
-    Assets.svgsBed,
-    Assets.svgsDining,
-    Assets.svgsChair,
-    Assets.svgsTvTable,
-    Assets.svgsCupboard,
-    Assets.svgsLamb,
-    Assets.svgsVase,
-  ];
+  const CategoriesSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,23 +23,26 @@ class CategoriesSection extends StatelessWidget {
         GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: 8,
+          itemCount: categoriesImages.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
               crossAxisSpacing: 15,
               mainAxisSpacing: 15,
               childAspectRatio: 1.1),
           itemBuilder: (context, index) {
-            return _buildCategoryCard(index);
+            return _buildCategoryCard(index, context);
           },
         ),
       ],
     );
   }
 
-  Widget _buildCategoryCard(int index) {
+  Widget _buildCategoryCard(int index, BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        context.pushNamed(Routes.categoriesScreen);
+      },
       child: Container(
         decoration: BoxDecoration(
           color: const Color(0x20898121),
@@ -53,8 +50,7 @@ class CategoriesSection extends StatelessWidget {
         ),
         child: Center(
             child: SvgPicture.asset(
-          _catergoryImages[index],
-        
+          categoriesImages[index],
           width: 36,
         )),
       ),

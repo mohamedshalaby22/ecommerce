@@ -6,6 +6,10 @@ class Assets {
   /// assets/images/arrival_chair.png
   static const String imagesArrivalChair = "assets/images/arrival_chair.png";
 
+  /// Assets for imagesBestSellerImage
+  /// assets/images/best-seller-image.png
+  static const String imagesBestSellerImage = "assets/images/best-seller-image.png";
+
   /// Assets for imagesChair
   /// assets/images/chair.png
   static const String imagesChair = "assets/images/chair.png";
@@ -61,6 +65,10 @@ class Assets {
   /// Assets for imagesSplashAndroid12
   /// assets/images/splash_android12.png
   static const String imagesSplashAndroid12 = "assets/images/splash_android12.png";
+
+  /// Assets for imagesTable
+  /// assets/images/table.png
+  static const String imagesTable = "assets/images/table.png";
 
   /// Assets for svgsApple
   /// assets/svgs/apple.svg

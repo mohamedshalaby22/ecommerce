@@ -1,4 +1,4 @@
-import 'package:ecommerce/features/home/ui/home_screen.dart';
+import 'package:ecommerce/features/home/ui/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
