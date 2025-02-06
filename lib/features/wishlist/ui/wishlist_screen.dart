@@ -17,7 +17,7 @@ class WishlistScreen extends StatelessWidget {
             children: [
               verticalSpace(10),
               const WishlistGirdView(),
-              verticalSpace(10),
+            
             ],
           ),
         ),

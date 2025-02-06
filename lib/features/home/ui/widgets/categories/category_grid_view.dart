@@ -20,6 +20,7 @@ class CategoryGridView extends StatelessWidget {
           return const ProductCard(
             imageUrl: Assets.imagesTable,
             isFavourite: false,
+            isPadding: false,
             category: 'Tables',
             name: 'Modern tables',
             price: '230.00',

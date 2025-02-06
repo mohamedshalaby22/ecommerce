@@ -39,6 +39,7 @@ class _SignupFormState extends State<SignupForm> {
         verticalSpace(15),
         AppTextFormField(
           hintText: 'Email',
+          textInputType: TextInputType.emailAddress,
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12.0),
             child: SvgPicture.asset(

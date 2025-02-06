@@ -20,6 +20,7 @@ class _LoginFormState extends State<LoginForm> {
       children: [
         AppTextFormField(
           hintText: 'Email',
+          textInputType: TextInputType.emailAddress,
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12.0),
             child: SvgPicture.asset(

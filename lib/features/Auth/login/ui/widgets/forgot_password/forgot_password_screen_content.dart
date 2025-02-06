@@ -19,19 +19,21 @@ class ForgotPasswordScreenContent extends StatelessWidget {
             top: Radius.circular(35),
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            verticalSpace(10),
-            Text(
-              'Reset new password',
-              style: TextStyles.font18lackSemiBold,
-            ),
-            verticalSpace(20),
-            const ForgotPasswordForm(),
-            verticalSpace(20),
-            AppTextButton(buttonText: 'Reset password', onPressed: () {}),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              verticalSpace(10),
+              Text(
+                'Reset new password',
+                style: TextStyles.font18lackSemiBold,
+              ),
+              verticalSpace(20),
+              const ForgotPasswordForm(),
+              verticalSpace(20),
+              AppTextButton(buttonText: 'Reset password', onPressed: () {}),
+            ],
+          ),
         ),
       ),
     );

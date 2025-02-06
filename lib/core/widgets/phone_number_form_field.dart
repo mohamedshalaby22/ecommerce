@@ -19,10 +19,10 @@ class PhoneNumberFormField extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(25),
         color: Colors.white,
         border: Border.all(
-          width: 0.8,
+          width: 0.6,
           color: Colors.grey,
         ),
       ),

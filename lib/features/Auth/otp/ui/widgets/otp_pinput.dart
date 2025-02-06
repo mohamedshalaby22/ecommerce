@@ -14,13 +14,13 @@ class OtpPinput extends StatelessWidget {
       textStyle: TextStyles.font20MainGreenSemiBold,
       decoration: BoxDecoration(
         border: Border.all(color: ColorsManager.mainGreen),
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(25),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
       border: Border.all(color: ColorsManager.mainGreen),
-      borderRadius: BorderRadius.circular(6),
+      borderRadius: BorderRadius.circular(25),
     );
     final submittedPinTheme = defaultPinTheme.copyWith(
         decoration: defaultPinTheme.decoration!.copyWith(
@@ -29,6 +29,7 @@ class OtpPinput extends StatelessWidget {
         textStyle: defaultPinTheme.textStyle!.copyWith(color: Colors.white));
     return Pinput(
       length: 6,
+      controller: TextEditingController(),
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,
       submittedPinTheme: submittedPinTheme,

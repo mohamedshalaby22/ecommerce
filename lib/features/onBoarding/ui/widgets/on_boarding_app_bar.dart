@@ -31,7 +31,7 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: onSkip,
               child: Text(
                isSkip? 'SKIP':'CONTINUE',
-                style: TextStyles.font18MainGreenSemiBold,
+                style: TextStyles.font14MainGreenSemiBold,
               )),
         )
       ],
