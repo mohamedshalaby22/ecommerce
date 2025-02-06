@@ -1,8 +1,8 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/features/home/data/utils/categories_images.dart';
-import 'package:ecommerce/features/search/ui/widgets/search_field.dart';
+import 'package:ecommerce/features/search/ui/widgets/search/search_field.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../../core/theming/styles.dart';
 import 'search_categroy_card.dart';
 
 class SearchGridView extends StatelessWidget {

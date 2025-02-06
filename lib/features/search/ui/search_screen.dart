@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
-import 'package:ecommerce/features/search/ui/widgets/search_grid_view.dart';
+import 'package:ecommerce/features/search/ui/widgets/search/search_grid_view.dart';
 import 'package:flutter/material.dart';
 import '../../../core/widgets/main_appbar.dart';
 
