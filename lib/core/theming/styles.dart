@@ -5,11 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextStyles {
-  static TextStyle font28MainBlueBold = TextStyle(
-      fontSize: 28.sp,
-      color: ColorsManager.mainGreen,
-      fontWeight: FontWeightHelper.bold,
-      fontFamily: AppConstants.appFontFamily);
   static TextStyle font20BlackBold = TextStyle(
       fontSize: 20.sp,
       color: Colors.black,
@@ -98,6 +93,11 @@ class TextStyles {
       color: Colors.grey,
       fontWeight: FontWeightHelper.medium,
       fontFamily: AppConstants.appFontFamily);
+  static TextStyle font13Black54Medium = TextStyle(
+      fontSize: 13.sp,
+      color: Colors.black54,
+      fontWeight: FontWeightHelper.medium,
+      fontFamily: AppConstants.appFontFamily);
 
   static TextStyle font13BlackMedium = TextStyle(
       fontSize: 13.sp,
@@ -150,6 +150,16 @@ class TextStyles {
       fontSize: 14.sp,
       color: Colors.black,
       fontWeight: FontWeightHelper.medium,
+      fontFamily: AppConstants.appFontFamily);
+  static TextStyle font14BlackBold = TextStyle(
+      fontSize: 14.sp,
+      color: Colors.black,
+      fontWeight: FontWeightHelper.bold,
+      fontFamily: AppConstants.appFontFamily);
+  static TextStyle font14BlackSemiBold = TextStyle(
+      fontSize: 14.sp,
+      color: Colors.black,
+      fontWeight: FontWeightHelper.semiBold,
       fontFamily: AppConstants.appFontFamily);
   static TextStyle font15WhiteBold = TextStyle(
       fontSize: 15.sp,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../core/constants/app_images.dart';
 import '../home/product_card.dart';
 

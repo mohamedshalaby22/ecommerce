@@ -20,6 +20,7 @@ class AppTextFormField extends StatelessWidget {
       this.controller,
       this.maxLines,
       this.inputFormatters,
+      this.onChange,
       this.textInputType,
       required this.validator});
   final InputBorder? enabledBorder, focusedBorder;
@@ -34,6 +35,7 @@ class AppTextFormField extends StatelessWidget {
   final TextInputType? textInputType;
   final TextEditingController? controller;
   final Function(String?) validator;
+  final Function(String value)? onChange;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -41,9 +43,14 @@ class AppTextFormField extends StatelessWidget {
       validator: (value) {
         return validator(value);
       },
-      style: textStyle ?? TextStyles.font13BlackMedium,
+      onChanged: (value) {
+        if (onChange != null) {
+          onChange!(value);
+        }
+      },
+      style: textStyle ?? TextStyles.font13Black54Medium,
       obscureText: isObscureText ?? false,
-      cursorColor: ColorsManager.mainBlue,
+      cursorColor: ColorsManager.mainGreen,
       maxLines: maxLines ?? 1,
       keyboardType: textInputType ?? TextInputType.text,
       inputFormatters: inputFormatters ?? [],
@@ -53,19 +60,18 @@ class AppTextFormField extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: 15.w, vertical: 12.h),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
-                borderRadius: BorderRadius.circular(6),
+                borderRadius: BorderRadius.circular(25),
                 borderSide: const BorderSide(
-                    color: ColorsManager.mainGreen, width: 1.1)),
+                    color: ColorsManager.mainGreen, width: 0.6)),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(6),
-            borderSide:
-                const BorderSide(color: Colors.grey, width: 1.1)),
+            borderRadius: BorderRadius.circular(25),
+            borderSide: const BorderSide(color: Colors.grey, width: 0.6)),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(6),
-            borderSide: const BorderSide(color: Colors.red, width: 1.1)),
+            borderRadius: BorderRadius.circular(25),
+            borderSide: const BorderSide(color: Colors.red, width: 0.6)),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(6),
-            borderSide: const BorderSide(color: Colors.red, width: 1.1)),
+            borderRadius: BorderRadius.circular(25),
+            borderSide: const BorderSide(color: Colors.red, width: 0.6)),
         suffixIcon: suffixIcon ?? const SizedBox(),
         prefixIcon: prefixIcon,
         hintStyle: hintStyle ?? TextStyles.font13GreyMedium,

@@ -42,7 +42,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
               icon: HugeIcon(
                 icon: item.icon,
                 size: 25,
-                color: isSelected ? ColorsManager.mainBlue : Colors.grey,
+                color: isSelected ? ColorsManager.mainGreen : Colors.grey,
               ),
               label: item.label,
             );

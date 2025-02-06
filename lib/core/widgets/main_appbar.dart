@@ -9,7 +9,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: Text(title, style: TextStyles.font28MainBlueBold),
+      title: Text(title, style: TextStyles.font20MainGreenSemiBold),
       surfaceTintColor: Colors.transparent,
       elevation: 0.0,
       backgroundColor: Colors.transparent,

@@ -53,12 +53,12 @@ Future<dynamic> showCustomDialog({
                       verticalSpace(15),
                       Text(
                         title,
-                        style: TextStyles.font28MainBlueBold,
+                        style: TextStyles.font16BlackBold,
                       ),
                       verticalSpace(3),
                       Text(
                         message,
-                        style: TextStyles.font28MainBlueBold,
+                        style: TextStyles.font16BlackBold,
                       ),
                     ],
                   ),
@@ -79,7 +79,7 @@ Future<dynamic> showCustomDialog({
                         }
                         Navigator.of(context).pop();
                       },
-                      textStyle: TextStyles.font28MainBlueBold,
+                      textStyle: TextStyles.font16BlackBold,
                       borderColor: Colors.grey,
                       backgroundColor: Colors.transparent,
                     ),
@@ -91,7 +91,7 @@ Future<dynamic> showCustomDialog({
                     buttonHeight: 20,
                     onPressed:
                         onPrimaryPressed ?? () => Navigator.of(context).pop(),
-                    textStyle: TextStyles.font28MainBlueBold,
+                    textStyle: TextStyles.font16BlackBold,
                     backgroundColor: iconColor,
                   ),
                 ),

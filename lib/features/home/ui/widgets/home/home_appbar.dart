@@ -1,7 +1,9 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../../../../core/routing/routes.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
@@ -34,9 +36,14 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
               verticalSpace(5),
-              const HugeIcon(
-                  icon: HugeIcons.strokeRoundedNotification02,
-                  color: Colors.black),
+              GestureDetector(
+                onTap: () {
+                  context.pushNamed(Routes.notificationsScreen);
+                },
+                child: const HugeIcon(
+                    icon: HugeIcons.strokeRoundedNotification02,
+                    color: Colors.black),
+              ),
             ],
           )
         ],

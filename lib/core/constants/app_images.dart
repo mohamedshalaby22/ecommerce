@@ -10,6 +10,10 @@ class Assets {
   /// assets/images/best-seller-image.png
   static const String imagesBestSellerImage = "assets/images/best-seller-image.png";
 
+  /// Assets for imagesCartImage
+  /// assets/images/cart-image.png
+  static const String imagesCartImage = "assets/images/cart-image.png";
+
   /// Assets for imagesChair
   /// assets/images/chair.png
   static const String imagesChair = "assets/images/chair.png";
@@ -93,6 +97,18 @@ class Assets {
   /// Assets for svgsEmail
   /// assets/svgs/email.svg
   static const String svgsEmail = "assets/svgs/email.svg";
+
+  /// Assets for svgsEmptyCartList
+  /// assets/svgs/empty-cart-list.svg
+  static const String svgsEmptyCartList = "assets/svgs/empty-cart-list.svg";
+
+  /// Assets for svgsEmptyNotificationList
+  /// assets/svgs/empty_notification_list.svg
+  static const String svgsEmptyNotificationList = "assets/svgs/empty_notification_list.svg";
+
+  /// Assets for svgsEmptyWishlist
+  /// assets/svgs/empty-wishlist.svg
+  static const String svgsEmptyWishlist = "assets/svgs/empty-wishlist.svg";
 
   /// Assets for svgsEyeClosed
   /// assets/svgs/eye-closed.svg
