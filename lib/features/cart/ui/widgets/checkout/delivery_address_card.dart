@@ -4,9 +4,8 @@ import 'package:hugeicons/hugeicons.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 
-class SelectLocationCard extends StatelessWidget {
-  const SelectLocationCard({super.key});
-
+class DeliveryAddressCard extends StatelessWidget {
+  const DeliveryAddressCard({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(

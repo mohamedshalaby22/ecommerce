@@ -1,11 +1,13 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/widgets/secondary_appbar.dart';
 import 'package:flutter/material.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/app_text_button.dart';
-import '../widgets/checkout/payment_methods_section.dart';
-import '../widgets/checkout/payment_summary_card.dart';
-import '../widgets/checkout/payment_voucher_card.dart';
-import '../widgets/checkout/select_location_card.dart';
+import '../widgets/checkout/payment_method_selection.dart';
+import '../widgets/checkout/payment_summary_section.dart';
+import '../widgets/checkout/voucher_card.dart';
+import '../widgets/checkout/delivery_address_card.dart';
 
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
@@ -21,15 +23,14 @@ class CheckoutScreen extends StatelessWidget {
             child: Column(
               children: [
                 verticalSpace(10),
-                const SelectLocationCard(),
+                const DeliveryAddressCard(),
                 verticalSpace(15),
-                PaymentMethodsSection(
+                PaymentMethodSelection(
                   onSelectPaymentMethod: (String selectedPaymentMethod) {},
                 ),
-                const PaymentVoucherCard(),
+                const VoucherCard(),
                 verticalSpace(15),
-                const PaymentSummaryCard(),
-               
+                const PaymentSummarySection(),
               ],
             ),
           ),
@@ -41,7 +42,7 @@ class CheckoutScreen extends StatelessWidget {
         child: AppTextButton(
             buttonText: 'Place Order',
             onPressed: () {
-              // context.pushNamed(Routes.checkoutScreen);
+              context.pushNamed(Routes.paymentSuceessScreen);
             }),
       ),
     );

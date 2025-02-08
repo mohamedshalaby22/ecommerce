@@ -2,17 +2,18 @@ import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:ecommerce/features/cart/ui/widgets/checkout/payment_method_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../../../../core/constants/app_images.dart';
 
-class PaymentMethodsSection extends StatefulWidget {
-  const PaymentMethodsSection({super.key, required this.onSelectPaymentMethod});
+class PaymentMethodSelection extends StatefulWidget {
+  const PaymentMethodSelection({super.key, required this.onSelectPaymentMethod});
   final Function(String selectedPaymentMethod) onSelectPaymentMethod;
 
   @override
-  State<PaymentMethodsSection> createState() => _PaymentMethodsSectionState();
+  State<PaymentMethodSelection> createState() => _PaymentMethodSelectionState();
 }
 
-class _PaymentMethodsSectionState extends State<PaymentMethodsSection> {
+class _PaymentMethodSelectionState extends State<PaymentMethodSelection> {
   String _selectedPaymentMethod = 'paypal';
 
   void _updateSelectedPaymentMethod(String paymentMethod) {
@@ -20,6 +21,7 @@ class _PaymentMethodsSectionState extends State<PaymentMethodsSection> {
       _selectedPaymentMethod = paymentMethod;
       widget.onSelectPaymentMethod(paymentMethod);
     });
+    HapticFeedback.selectionClick();
   }
 
  

@@ -150,6 +150,10 @@ class Assets {
   /// assets/svgs/lock.svg
   static const String svgsLock = "assets/svgs/lock.svg";
 
+  /// Assets for svgsPaymentSuccess
+  /// assets/svgs/payment-success.svg
+  static const String svgsPaymentSuccess = "assets/svgs/payment-success.svg";
+
   /// Assets for svgsPaypal
   /// assets/svgs/paypal.svg
   static const String svgsPaypal = "assets/svgs/paypal.svg";
