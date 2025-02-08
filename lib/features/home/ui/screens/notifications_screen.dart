@@ -1,4 +1,4 @@
-import 'package:ecommerce/core/widgets/primary_appbar.dart';
+import 'package:ecommerce/core/widgets/secondary_appbar.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../widgets/notifications/notification_list_view.dart';

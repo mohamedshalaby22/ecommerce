@@ -24,7 +24,8 @@ class WishlistGirdView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const ProductCard( 
               imageUrl: Assets.imagesTable,
-              isFavourite: false,
+              isFavourite: true,
+              isPadding: false,
               category: 'Tables',
               name: 'Modern tables',
               price: '230.00',

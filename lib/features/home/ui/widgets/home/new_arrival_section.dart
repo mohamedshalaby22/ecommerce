@@ -1,8 +1,10 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:ecommerce/core/widgets/favorite_icon.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/routing/routes.dart';
 
 class NewArrivalsSection extends StatelessWidget {
   const NewArrivalsSection({super.key});
@@ -22,12 +24,17 @@ class NewArrivalsSection extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 16),
             itemCount: 2,
-            itemBuilder: (context, index) => _buildNewArrivalCard(
-              imageUrl: Assets.imagesArrivalChair,
-              title: 'Rustic Haven set',
-              description:
-                  'Elevate your living space with the timeless elegance and comfort to your space',
-              price: '230.00',
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                context.pushNamed(Routes.productDetailsScreen);
+              },
+              child: _buildNewArrivalCard(
+                imageUrl: Assets.imagesArrivalChair,
+                title: 'Rustic Haven set',
+                description:
+                    'Elevate your living space with the timeless elegance and comfort to your space',
+                price: '230.00',
+              ),
             ),
           ),
         ),

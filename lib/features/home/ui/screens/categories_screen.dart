@@ -1,6 +1,6 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/widgets/primary_appbar.dart';
+import '../../../../core/widgets/secondary_appbar.dart';
 import '../widgets/categories/category_grid_view.dart';
 import '../widgets/categories/category_list_view.dart';
 

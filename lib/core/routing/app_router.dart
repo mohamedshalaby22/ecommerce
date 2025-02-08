@@ -5,6 +5,7 @@ import 'package:ecommerce/features/Auth/login/ui/screens/login_screen.dart';
 import 'package:ecommerce/features/Auth/otp/ui/otp_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/categories_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/notifications_screen.dart';
+import 'package:ecommerce/features/home/ui/screens/product_details_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/main_navigation_bar/main_navigation_bar.dart';
 import '../../features/onBoarding/ui/on_boarding_screen.dart';
@@ -26,6 +27,8 @@ class AppRouter {
         return buildRoute(const CategoriesScreen());
         case Routes.notificationsScreen:
         return buildRoute(const NotificationsScreen());
+        case Routes.productDetailsScreen:
+        return buildRoute(const ProductDetailsScreen());
       default:
         return null;
     }

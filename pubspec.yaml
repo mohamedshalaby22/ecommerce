@@ -44,6 +44,4 @@ flutter_assets:
         - asset: fonts/Kulim_Park/KulimPark-Light.ttf
         - asset: fonts/Kulim_Park/KulimPark-Regular.ttf
         - asset: fonts/Kulim_Park/KulimPark-SemiBold.ttf
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
+        
