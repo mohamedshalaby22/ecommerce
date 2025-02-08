@@ -2,7 +2,7 @@ import 'package:ecommerce/features/home/ui/screens/home_screen.dart';
 import 'package:ecommerce/features/wishlist/ui/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-import '../cart/ui/cart_screen.dart';
+import '../cart/ui/screens/cart_screen.dart';
 import '../search/ui/search_screen.dart';
 
 class NavigationItem {

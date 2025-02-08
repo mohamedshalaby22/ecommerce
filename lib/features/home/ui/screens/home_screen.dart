@@ -7,7 +7,6 @@ import '../widgets/home/home_appbar.dart';
 import '../widgets/home/banner_slider.dart';
 import '../widgets/home/new_arrival_section.dart';
 import '../widgets/home/rooms_section.dart';
-import '../widgets/home/select_location_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,18 +23,16 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               verticalSpace(10),
-              const SelectLocationCard(),
-              verticalSpace(25),
               const BannerSlider(),
-              verticalSpace(30),
+              verticalSpace(20),
              const CategoriesSection(),
-              verticalSpace(25),
+              verticalSpace(20),
               const NewArrivalsSection(),
               verticalSpace(15),
               const RoomsSection(),
-              verticalSpace(25),
+              verticalSpace(20),
               const BestSellerSection(),
-              verticalSpace(25),
+              verticalSpace(20),
               const FeaturedProductsSection(),
             ],
           ),

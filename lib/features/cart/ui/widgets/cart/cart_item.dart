@@ -4,7 +4,7 @@ import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
-import '../../../../core/widgets/delete_item_background.dart';
+import '../../../../../core/widgets/delete_item_background.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem(

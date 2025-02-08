@@ -82,6 +82,10 @@ class Assets {
   /// assets/svgs/bed.svg
   static const String svgsBed = "assets/svgs/bed.svg";
 
+  /// Assets for svgsCard
+  /// assets/svgs/card.svg
+  static const String svgsCard = "assets/svgs/card.svg";
+
   /// Assets for svgsChair
   /// assets/svgs/chair.svg
   static const String svgsChair = "assets/svgs/chair.svg";
@@ -134,6 +138,10 @@ class Assets {
   /// assets/svgs/heart-outline.svg
   static const String svgsHeartOutline = "assets/svgs/heart-outline.svg";
 
+  /// Assets for svgsKlarna
+  /// assets/svgs/klarna.svg
+  static const String svgsKlarna = "assets/svgs/klarna.svg";
+
   /// Assets for svgsLamb
   /// assets/svgs/lamb.svg
   static const String svgsLamb = "assets/svgs/lamb.svg";
@@ -141,6 +149,10 @@ class Assets {
   /// Assets for svgsLock
   /// assets/svgs/lock.svg
   static const String svgsLock = "assets/svgs/lock.svg";
+
+  /// Assets for svgsPaypal
+  /// assets/svgs/paypal.svg
+  static const String svgsPaypal = "assets/svgs/paypal.svg";
 
   /// Assets for svgsSofa
   /// assets/svgs/sofa.svg

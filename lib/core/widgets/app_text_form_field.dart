@@ -21,6 +21,7 @@ class AppTextFormField extends StatelessWidget {
       this.maxLines,
       this.inputFormatters,
       this.onChange,
+      this.borderRadius,
       this.textInputType,
       required this.validator});
   final InputBorder? enabledBorder, focusedBorder;
@@ -36,6 +37,7 @@ class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String?) validator;
   final Function(String value)? onChange;
+  final double? borderRadius;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -60,17 +62,17 @@ class AppTextFormField extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: 15.w, vertical: 12.h),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
-                borderRadius: BorderRadius.circular(35),
+                borderRadius: BorderRadius.circular(borderRadius ?? 35),
                 borderSide: const BorderSide(
                     color: ColorsManager.mainGreen, width: 0.6)),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35),
+            borderRadius: BorderRadius.circular(borderRadius ?? 35),
             borderSide: const BorderSide(color: Colors.grey, width: 0.6)),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35),
+            borderRadius: BorderRadius.circular(borderRadius ?? 35),
             borderSide: const BorderSide(color: Colors.red, width: 0.6)),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35),
+            borderRadius: BorderRadius.circular(borderRadius ?? 35),
             borderSide: const BorderSide(color: Colors.red, width: 0.6)),
         suffixIcon: suffixIcon ?? const SizedBox(),
         prefixIcon: prefixIcon,

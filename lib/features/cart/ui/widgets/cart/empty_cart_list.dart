@@ -2,7 +2,7 @@ import 'package:ecommerce/core/constants/app_images.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../../core/theming/styles.dart';
 
 class EmptyCartList extends StatelessWidget {
   const EmptyCartList({super.key});
