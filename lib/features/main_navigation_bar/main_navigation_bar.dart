@@ -5,22 +5,26 @@ import '../../core/theming/colors.dart';
 import 'navigation_items.dart';
 
 class MainNavigationBar extends StatefulWidget {
-  const MainNavigationBar({super.key});
-
+  const MainNavigationBar({super.key, this.selectedIndex = 0});
+  final int selectedIndex;
   @override
-  State<MainNavigationBar> createState() =>
-      _MainNavigationBarState();
+  State<MainNavigationBar> createState() => _MainNavigationBarState();
 }
 
 class _MainNavigationBarState extends State<MainNavigationBar> {
-  int _selectedIndex = 0;
+  late int _currentIndex;
+  @override
+  void initState() {
+    _currentIndex = widget.selectedIndex;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
-          index: _selectedIndex,
-          children:
-              navigationItems.map((item) => item.page).toList()),
+          index: _currentIndex,
+          children: navigationItems.map((item) => item.page).toList()),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           boxShadow: [
@@ -29,15 +33,15 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
         ),
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
-          currentIndex: _selectedIndex,
+          currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
           selectedItemColor: ColorsManager.mainGreen,
           onTap: (int index) {
             HapticFeedback.selectionClick();
-            setState(() => _selectedIndex = index);
+            setState(() => _currentIndex = index);
           },
           items: navigationItems.map((item) {
-            bool isSelected = _selectedIndex == navigationItems.indexOf(item);
+            bool isSelected = _currentIndex == navigationItems.indexOf(item);
             return BottomNavigationBarItem(
               icon: HugeIcon(
                 icon: item.icon,

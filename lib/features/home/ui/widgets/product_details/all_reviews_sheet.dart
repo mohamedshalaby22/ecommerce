@@ -1,9 +1,9 @@
-import 'package:ecommerce/features/search/ui/widgets/filter_search/filter_search_sheet_content.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/widgets/full_sheet_app_bar.dart';
+import 'all_reviews_sheet_list_view.dart';
 
-class FilterSearchSheet extends StatelessWidget {
-  const FilterSearchSheet({super.key});
+class AllReviewsSheet extends StatelessWidget {
+  const AllReviewsSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,15 @@ class FilterSearchSheet extends StatelessWidget {
           top: Radius.circular(25),
         ),
       ),
-      child: const SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            FullSheetAppBar(),
-            FilterSearchSheetContent(),
-          ],
-        ),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          FullSheetAppBar(
+            title: 'Reviews',
+            subTitle: 'Read more about product reviews',
+          ),
+           AllReviewsSheetListView(),
+        ],
       ),
     );
   }

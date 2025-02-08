@@ -1,13 +1,15 @@
 import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../helpers/spacing.dart';
+import '../theming/styles.dart';
 
-import '../../../../../core/helpers/spacing.dart';
-import '../../../../../core/theming/styles.dart';
-
-class FilterSearchSheetAppBar extends StatelessWidget {
-  const FilterSearchSheetAppBar({super.key});
-
+class FullSheetAppBar extends StatelessWidget {
+  const FullSheetAppBar(
+      {super.key,
+      this.title = 'Filter your search',
+      this.subTitle = 'Select all filters you prefer for your search'});
+  final String title, subTitle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,12 +33,12 @@ class FilterSearchSheetAppBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Filter your search',
+                  title,
                   style: TextStyles.font18BlackSemiBold,
                 ),
                 verticalSpace(5),
                 Text(
-                  'Select all filters you prefer for your search',
+                  subTitle,
                   style: TextStyles.font12GreyRegular,
                 ),
               ],

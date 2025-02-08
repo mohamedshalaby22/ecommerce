@@ -21,13 +21,14 @@ class AppRouter {
         return buildRoute(const ForgotPasswordScreen());
       case Routes.otpScreen:
         return buildRoute(const OtpScreen());
-        case Routes.mainNavigationBar:
-        return buildRoute(const MainNavigationBar());
-        case Routes.categoriesScreen:
+      case Routes.mainNavigationBar:
+        final int selectedIndex = settings.arguments as int? ?? 0;
+        return buildRoute(MainNavigationBar(selectedIndex: selectedIndex));
+      case Routes.categoriesScreen:
         return buildRoute(const CategoriesScreen());
-        case Routes.notificationsScreen:
+      case Routes.notificationsScreen:
         return buildRoute(const NotificationsScreen());
-        case Routes.productDetailsScreen:
+      case Routes.productDetailsScreen:
         return buildRoute(const ProductDetailsScreen());
       default:
         return null;

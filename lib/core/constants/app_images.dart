@@ -103,8 +103,8 @@ class Assets {
   static const String svgsEmptyCartList = "assets/svgs/empty-cart-list.svg";
 
   /// Assets for svgsEmptyNotificationList
-  /// assets/svgs/empty_notification_list.svg
-  static const String svgsEmptyNotificationList = "assets/svgs/empty_notification_list.svg";
+  /// assets/svgs/empty-notification-list.svg
+  static const String svgsEmptyNotificationList = "assets/svgs/empty-notification-list.svg";
 
   /// Assets for svgsEmptyWishlist
   /// assets/svgs/empty-wishlist.svg
@@ -145,6 +145,14 @@ class Assets {
   /// Assets for svgsSofa
   /// assets/svgs/sofa.svg
   static const String svgsSofa = "assets/svgs/sofa.svg";
+
+  /// Assets for svgsStarFill
+  /// assets/svgs/star-fill.svg
+  static const String svgsStarFill = "assets/svgs/star-fill.svg";
+
+  /// Assets for svgsStarOutline
+  /// assets/svgs/star-outline.svg
+  static const String svgsStarOutline = "assets/svgs/star-outline.svg";
 
   /// Assets for svgsTvTable
   /// assets/svgs/tv-table.svg

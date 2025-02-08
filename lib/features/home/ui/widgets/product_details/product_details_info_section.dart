@@ -4,8 +4,9 @@ import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'product_availability_card.dart';
 import 'product_color_selector.dart';
+import 'product_details_buttons.dart';
 import 'product_dimensions.dart';
-import 'product_reviews.dart';
+import 'product_review_list_view.dart';
 
 class ProductDetailsInfoSection extends StatelessWidget {
   const ProductDetailsInfoSection({super.key});
@@ -21,16 +22,15 @@ class ProductDetailsInfoSection extends StatelessWidget {
           verticalSpace(10),
           const ProductColorSelector(),
           verticalSpace(10),
-          Text(
-            'Lorem ipsum dolor sit amet consectetur. Nunc eget tortor sagittis sodales. Faucibus cursus sed at in. Lacus massa purus sit magna auctor. Turpis neque enim et morbi nunc aliquam. Amet justo id arcu in nec. Viverra varius congue malesuada penatibus lectus. Cursus cras adipiscing dui tellus sodales maecenas. In morbi ut et faucibus sem. Dis quisque eu adipiscing morbi enim donec. Eget.',
-            style: TextStyles.font12GreyRegular,
-          ),
+          _buildDescriptionText(),
           verticalSpace(15),
           const ProductAvailabilityCard(isAvailable: true),
           verticalSpace(20),
           const ProductDimensions(),
           verticalSpace(20),
-          const ProductReviews(),
+          const ProductReviewListView(),
+          verticalSpace(20),
+          const ProductDetailsButtons(),
         ],
       ),
     );
@@ -65,6 +65,13 @@ class ProductDetailsInfoSection extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+
+  Text _buildDescriptionText() {
+    return Text(
+      'Lorem ipsum dolor sit amet consectetur. Nunc eget tortor sagittis sodales. Faucibus cursus sed at in. Lacus massa purus sit magna auctor. Turpis neque enim et morbi nunc aliquam. Amet justo id arcu in nec. Viverra varius congue malesuada penatibus lectus. Cursus cras adipiscing dui tellus sodales maecenas. In morbi ut et faucibus sem. Dis quisque eu adipiscing morbi enim donec. Eget.',
+      style: TextStyles.font12GreyRegular,
     );
   }
 }

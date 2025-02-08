@@ -60,17 +60,17 @@ class AppTextFormField extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: 15.w, vertical: 12.h),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(35),
                 borderSide: const BorderSide(
                     color: ColorsManager.mainGreen, width: 0.6)),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25),
+            borderRadius: BorderRadius.circular(35),
             borderSide: const BorderSide(color: Colors.grey, width: 0.6)),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25),
+            borderRadius: BorderRadius.circular(35),
             borderSide: const BorderSide(color: Colors.red, width: 0.6)),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25),
+            borderRadius: BorderRadius.circular(35),
             borderSide: const BorderSide(color: Colors.red, width: 0.6)),
         suffixIcon: suffixIcon ?? const SizedBox(),
         prefixIcon: prefixIcon,

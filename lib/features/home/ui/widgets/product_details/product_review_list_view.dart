@@ -3,17 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theming/styles.dart';
+import 'all_reviews_sheet.dart';
 import 'product_review_card.dart';
 
-class ProductReviews extends StatelessWidget {
-  const ProductReviews({super.key});
+class ProductReviewListView extends StatelessWidget {
+  const ProductReviewListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildReviewHeader(),
+        _buildReviewHeader(context),
         verticalSpace(15),
         SizedBox(
           height: 200,
@@ -25,17 +26,18 @@ class ProductReviews extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => const ProductReviewCard(
                 reviewerName: 'Jannis Schmitt',
-                reviewText: '“ Lorem ipsum dolor sit amet consectetur. Semper elementum sit egestas nulla semper. Venenatis tortor hendrerit.”',
+                reviewText:
+                    '“ Lorem ipsum dolor sit amet consectetur. Semper elementum sit egestas nulla semper. Venenatis tortor hendrerit.”',
               ),
             ),
           ),
         ),
-        verticalSpace(50),
+        
       ],
     );
   }
 
-  Row _buildReviewHeader() {
+  Row _buildReviewHeader(BuildContext context) {
     return Row(
       children: [
         Text(
@@ -44,12 +46,17 @@ class ProductReviews extends StatelessWidget {
         ),
         const Spacer(),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                builder: (_) => const AllReviewsSheet());
+          },
           child: Row(
             children: [
               Text(
-                'All Reviews',
-                style: TextStyles.font12MainGreenRegular,
+                'All reviews',
+                style: TextStyles.font14MainGreenSemiBold,
               ),
               horizontalSpace(5),
               const HugeIcon(
