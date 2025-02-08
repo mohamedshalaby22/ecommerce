@@ -11,14 +11,17 @@ class PaymentSuccessScreen extends StatelessWidget {
     return Scaffold(
       appBar: const MainAppBar(title: 'Payment Success'),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              verticalSpace(10),
-            const Center(child: PaymentSuccessContent()),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                verticalSpace(10),
+              const Center(child: PaymentSuccessContent()),
+               verticalSpace(25),
+              ],
+            ),
           ),
         ),
       ),

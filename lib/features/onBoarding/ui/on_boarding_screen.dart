@@ -28,16 +28,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         child: Column(
           children: [
             verticalSpace(5),
-            Expanded(
-              child: OnBoardingPageView(
-                currentPage: currentPage,
-                pageController: _pageController,
-                onChangeCurrentPage: (int currentPage) {
-                  setState(() {
-                    this.currentPage = currentPage;
-                  });
-                },
-              ),
+            OnBoardingPageView(
+              currentPage: currentPage,
+              pageController: _pageController,
+              onChangeCurrentPage: (int currentPage) {
+                setState(() {
+                  this.currentPage = currentPage;
+                });
+              },
             ),
             verticalSpace(10),
           ],

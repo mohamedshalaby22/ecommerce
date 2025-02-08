@@ -1,5 +1,6 @@
 import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class ForgotPasswordAppbar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -8,7 +9,6 @@ class ForgotPasswordAppbar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      
       backgroundColor: Colors.transparent,
       surfaceTintColor: Colors.transparent,
       automaticallyImplyLeading: false,
@@ -16,9 +16,12 @@ class ForgotPasswordAppbar extends StatelessWidget
         onPressed: () {
           context.pop();
         },
-        icon: const Icon(
-          Icons.arrow_back,
-          color: Colors.white,
+        icon: GestureDetector(
+          onTap: context.pop,
+          child: const HugeIcon(
+            icon: HugeIcons.strokeRoundedArrowLeft01,
+            color: Colors.white,
+          ),
         ),
       ),
     );

@@ -30,38 +30,43 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: PageView(
-            scrollDirection: Axis.horizontal,
-            controller: widget.pageController,
-            onPageChanged: (value) {
-              changePage(value);
-            },
-            children: [
-              buildFirstPage(),
-              buildSecondPage(),
-              buildThirdPage(),
-              buildFourthPage(),
-            ],
+    return Expanded(
+      child: Column(
+        children: [
+          Expanded(
+            child: PageView(
+              scrollDirection: Axis.horizontal,
+              controller: widget.pageController,
+              onPageChanged: (value) {
+                changePage(value);
+              },
+              children: [
+                buildFirstPage(),
+                buildSecondPage(),
+                buildThirdPage(),
+                buildFourthPage(),
+              ],
+            ),
           ),
-        ),
-        verticalSpace(20),
-        OnBoardingButton(
-          currentPage: widget.currentPage,
-          onPress: () {
-            if (widget.currentPage < 3) {
-              widget.pageController.animateToPage(widget.currentPage + 1,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.ease);
-            } else {
-              context.pushReplacementNamed(Routes.loginScreen);
-            }
-            HapticFeedback.selectionClick();
-          },
-        ),
-      ],
+          verticalSpace(20),
+          OnBoardingButton(
+            currentPage: widget.currentPage,
+            onPress: () {
+              navigateToLoginScreen();
+            },
+          ),
+        ],
+      ),
     );
+  }
+
+  void navigateToLoginScreen() {
+    if (widget.currentPage < 3) {
+      widget.pageController.animateToPage(widget.currentPage + 1,
+          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    } else {
+      context.pushReplacementNamed(Routes.loginScreen);
+    }
+    HapticFeedback.selectionClick();
   }
 }

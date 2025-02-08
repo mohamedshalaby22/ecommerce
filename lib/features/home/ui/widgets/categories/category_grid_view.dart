@@ -10,6 +10,7 @@ class CategoryGridView extends StatelessWidget {
     return Expanded(
       child: GridView.builder(
         itemCount: 6,
+        padding: const EdgeInsets.only(bottom: 25),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 15,

@@ -1,14 +1,16 @@
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
   const OnBoardingAppBar(
       {super.key,
       required this.isShowBackIcon,
       required this.onBack,
-      required this.onSkip, required this.isSkip});
-  final bool isShowBackIcon,isSkip;
+      required this.onSkip,
+      required this.isSkip});
+  final bool isShowBackIcon, isSkip;
   final VoidCallback onBack, onSkip;
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,12 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
       surfaceTintColor: Colors.transparent,
       automaticallyImplyLeading: false,
       leading: isShowBackIcon
-          ? IconButton(
-              onPressed: onBack,
-              icon: const Icon(Icons.arrow_back),
-              color: Colors.black,
+          ? GestureDetector(
+              onTap: onBack,
+              child: const HugeIcon(
+                icon: HugeIcons.strokeRoundedArrowLeft01,
+                color: Colors.black,
+              ),
             )
           : null,
       actions: [
@@ -30,7 +34,7 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: TextButton(
               onPressed: onSkip,
               child: Text(
-               isSkip? 'SKIP':'CONTINUE',
+                isSkip ? 'SKIP' : 'CONTINUE',
                 style: TextStyles.font14MainGreenSemiBold,
               )),
         )

@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/styles.dart';
 
-
-  Widget buildFirstPage() {
-    return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 16.w),
+Widget buildFirstPage() {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 16.w),
+    child: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -16,9 +16,11 @@ import '../../../../core/theming/styles.dart';
               Expanded(
                 child: Column(
                   children: [
-                    Image.asset(Assets.imagesOnBoardingImage1, fit: BoxFit.cover),
+                    Image.asset(Assets.imagesOnBoardingImage1,
+                        fit: BoxFit.cover),
                     verticalSpace(15),
-                    Image.asset(Assets.imagesOnBoardingImage3, fit: BoxFit.cover),
+                    Image.asset(Assets.imagesOnBoardingImage3,
+                        fit: BoxFit.cover),
                   ],
                 ),
               ),
@@ -38,12 +40,14 @@ import '../../../../core/theming/styles.dart';
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 
-  Widget buildSecondPage() {
-    return Padding(
-     padding:  EdgeInsets.symmetric(horizontal: 16.w),
+Widget buildSecondPage() {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 16.w),
+    child: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -56,12 +60,14 @@ import '../../../../core/theming/styles.dart';
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 
-  Widget buildThirdPage() {
-    return Padding(
-    padding:  EdgeInsets.symmetric(horizontal: 16.w),
+Widget buildThirdPage() {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 16.w),
+    child: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -90,12 +96,14 @@ import '../../../../core/theming/styles.dart';
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 
-  Widget buildFourthPage() {
-    return Padding(
-    padding:  EdgeInsets.symmetric(horizontal: 16.w),
+Widget buildFourthPage() {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 16.w),
+    child: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -108,20 +116,19 @@ import '../../../../core/theming/styles.dart';
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 
-  /// A reusable method for the text section to reduce redundancy.
-  Widget _buildTextSection(
-      {required String title, required String description}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title, style: TextStyles.font20BlackSemiBold),
-        verticalSpace(10),
-        Text(description,
-            style: TextStyles.font14GreyRegular.copyWith(height: 1.7)),
-      ],
-    );
-  }
-
+/// A reusable method for the text section to reduce redundancy.
+Widget _buildTextSection({required String title, required String description}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(title, style: TextStyles.font20BlackSemiBold),
+      verticalSpace(10),
+      Text(description,
+          style: TextStyles.font14GreyRegular.copyWith(height: 1.7)),
+    ],
+  );
+}
