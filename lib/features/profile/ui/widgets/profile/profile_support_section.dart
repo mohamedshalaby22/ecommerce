@@ -1,6 +1,9 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/features/profile/ui/widgets/profile/profile_option_card.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+
+import '../../../../../core/routing/routes.dart';
 
 class ProfileSupportSection extends StatelessWidget {
   const ProfileSupportSection({super.key});
@@ -19,7 +22,9 @@ class ProfileSupportSection extends StatelessWidget {
           ProfileOptionCard(
             icon: HugeIcons.strokeRoundedSecurityCheck,
             title: 'Privacy policy',
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.privacyPolicyScreen);
+            },
           ),
           ProfileOptionCard(
             icon: HugeIcons.strokeRoundedCustomerService02,
@@ -30,7 +35,7 @@ class ProfileSupportSection extends StatelessWidget {
             icon: HugeIcons.strokeRoundedInformationCircle,
             title: 'About Hiem',
             isShowDivider: false,
-            onTap: () {},
+            onTap: () {  context.pushNamed(Routes.aboutHeimScreen);},
           ),
         ],
       ),

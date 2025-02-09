@@ -7,6 +7,8 @@ import 'package:ecommerce/features/cart/ui/screens/payment_success_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/categories_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/notifications_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/product_details_screen.dart';
+import 'package:ecommerce/features/profile/ui/screens/about_heim_screen.dart';
+import 'package:ecommerce/features/profile/ui/screens/privacy_policy_screen.dart';
 import 'package:ecommerce/features/profile/ui/screens/vouchers_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/cart/ui/screens/checkout_screen.dart';
@@ -42,6 +44,10 @@ class AppRouter {
         return buildRoute(const VouchersScreen());
       case Routes.savedAddressesScreen:
         return buildRoute(const SavedAddressesScreen());
+      case Routes.privacyPolicyScreen:
+        return buildRoute( PrivacyPolicyScreen());
+      case Routes.aboutHeimScreen:
+        return buildRoute( const AboutHeimScreen());
       default:
         return null;
     }
