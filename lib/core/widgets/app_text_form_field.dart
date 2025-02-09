@@ -23,6 +23,7 @@ class AppTextFormField extends StatelessWidget {
       this.onChange,
       this.borderRadius,
       this.textInputType,
+      this.isScrollPadding = false,
       required this.validator});
   final InputBorder? enabledBorder, focusedBorder;
   final String hintText;
@@ -38,6 +39,7 @@ class AppTextFormField extends StatelessWidget {
   final Function(String?) validator;
   final Function(String value)? onChange;
   final double? borderRadius;
+  final bool isScrollPadding;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -56,6 +58,9 @@ class AppTextFormField extends StatelessWidget {
       maxLines: maxLines ?? 1,
       keyboardType: textInputType ?? TextInputType.text,
       inputFormatters: inputFormatters ?? [],
+      scrollPadding: EdgeInsets.only(
+          bottom:
+              isScrollPadding ? MediaQuery.of(context).viewInsets.bottom : 0),
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??

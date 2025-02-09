@@ -74,6 +74,7 @@ class FilterSearchSheetContent extends StatelessWidget {
             ),
           ],
         ),
+        
         verticalSpace(25),
       ],
     );

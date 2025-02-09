@@ -19,10 +19,11 @@ class SavedAddressListView extends StatelessWidget {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             onTap: () {
-               showModalBottomSheet(
-              isScrollControlled: true,
-              context: context,
-              builder: (_) => const EditSavedAddressSheet());
+              showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                builder: (_) => const EditSavedAddressSheet(),
+              );
             },
           ),
         ),

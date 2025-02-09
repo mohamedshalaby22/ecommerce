@@ -11,8 +11,10 @@ class PhoneNumberFormField extends StatelessWidget {
   const PhoneNumberFormField({
     super.key,
     required this.phoneController,
+    this.isScrollPadding = false,
   });
   final TextEditingController phoneController;
+  final bool isScrollPadding;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,6 +38,10 @@ class PhoneNumberFormField extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, bottom: 7),
                 child: TextFormField(
+                  scrollPadding: EdgeInsets.only(
+                      bottom: isScrollPadding
+                          ? MediaQuery.of(context).viewInsets.bottom
+                          : 0),
                   controller: phoneController,
                   style: TextStyles.font13BlackMedium,
                   keyboardType: TextInputType.phone,

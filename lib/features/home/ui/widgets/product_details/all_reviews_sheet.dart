@@ -10,7 +10,7 @@ class AllReviewsSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       width: double.infinity,
-      height: MediaQuery.sizeOf(context).height - 80,
+       height: MediaQuery.sizeOf(context).height*0.9,
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.vertical(
