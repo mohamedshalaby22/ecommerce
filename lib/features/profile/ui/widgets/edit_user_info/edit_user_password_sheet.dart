@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import '../../../../../../core/widgets/full_sheet_app_bar.dart';
+import 'edit_user_password_content.dart';
+
+class EditUserPasswordSheet extends StatelessWidget {
+  const EditUserPasswordSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      width: double.infinity,
+      height: MediaQuery.sizeOf(context).height - 300,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(25),
+        ),
+      ),
+      child: const SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            FullSheetAppBar(
+              title: 'Change Password',
+              subTitle: 'Update your account’s password for security',
+            ),
+            EditUserPasswordContent(),
+          ],
+        ),
+      ),
+    );
+  }
+}

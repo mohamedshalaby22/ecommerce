@@ -57,7 +57,7 @@ class _LoginScreenContentState extends State<LoginScreenContent> {
                     AppTextButton(
                       backgroundColor: Colors.transparent,
                       borderColor: ColorsManager.mainGreen,
-                      textStyle: TextStyles.font1MainGreenMedium,
+                      textStyle: TextStyles.font16MainGreenMedium,
                       buttonText: 'Continue as a guest',
                       onPressed: () {},
                     ),

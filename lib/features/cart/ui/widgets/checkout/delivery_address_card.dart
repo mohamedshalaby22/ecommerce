@@ -12,7 +12,7 @@ class DeliveryAddressCard extends StatelessWidget {
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: const Color(0x15898121),
+        color: ColorsManager.lightGreen,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

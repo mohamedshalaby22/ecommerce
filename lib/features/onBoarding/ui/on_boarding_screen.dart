@@ -22,7 +22,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       appBar: OnBoardingAppBar(
         isShowBackIcon: currentPage != 0,
         onBack: onBack,
-        onSkip: onSkip, isSkip: currentPage != 3,
+        onSkip: onSkip,
+        isSkip: currentPage != 3,
       ),
       body: SafeArea(
         child: Column(

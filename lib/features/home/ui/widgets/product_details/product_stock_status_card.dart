@@ -4,15 +4,15 @@ import 'package:hugeicons/hugeicons.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 
-class ProductAvailabilityCard extends StatelessWidget {
-  const ProductAvailabilityCard({super.key, required this.isAvailable});
+class ProductStockStatusCard extends StatelessWidget {
+  const ProductStockStatusCard({super.key, required this.isAvailable});
   final bool isAvailable;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
-        color: isAvailable ? const Color(0x20898121) : const Color(0x20EB4335),
+        color: isAvailable ? ColorsManager.lightGreen : const Color(0x20EB4335),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(

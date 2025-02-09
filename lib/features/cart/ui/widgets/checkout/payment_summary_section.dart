@@ -43,7 +43,7 @@ class PaymentSummarySection extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 15),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                decoration: const BoxDecoration(color: Color(0x20898121)),
+                decoration: const BoxDecoration(color: ColorsManager.lightGreen,),
                 child: _buildPaymentSummaryRow(
                     text: 'Total Amount',
                     price: '250.20',
@@ -93,7 +93,7 @@ class PaymentSummarySection extends StatelessWidget {
             const Spacer(),
             Text('\$$price',
                 style: TextStyles.font14BlackSemiBold.copyWith(
-                  fontSize:  isMainGreenColor?18:14,
+                    fontSize: isMainGreenColor ? 18 : 14,
                     color:
                         isGreenColor ? ColorsManager.mainGreen : Colors.black)),
           ],

@@ -38,7 +38,7 @@ class PaymentSuccessContent extends StatelessWidget {
         AppTextButton(
           backgroundColor: Colors.transparent,
           borderColor: ColorsManager.mainGreen,
-          textStyle: TextStyles.font1MainGreenMedium,
+          textStyle: TextStyles.font16MainGreenMedium,
           buttonText: 'Continue shopping',
           onPressed: () {
             context.pushNamedAndRemoveUntil(Routes.mainNavigationBar,

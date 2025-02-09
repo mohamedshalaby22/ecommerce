@@ -50,7 +50,7 @@ class AppTextFormField extends StatelessWidget {
           onChange!(value);
         }
       },
-      style: textStyle ?? TextStyles.font13Black54Medium,
+      style: textStyle ?? TextStyles.font13BlackMedium,
       obscureText: isObscureText ?? false,
       cursorColor: ColorsManager.mainGreen,
       maxLines: maxLines ?? 1,

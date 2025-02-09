@@ -2,7 +2,7 @@ import 'package:ecommerce/features/Auth/login/ui/widgets/login/auth_header.dart'
 import 'package:ecommerce/features/Auth/login/ui/widgets/forgot_password/forgot_password_appbar.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/theming/colors.dart';
-import '../widgets/forgot_password/forgot_password_screen_content.dart';
+import '../widgets/forgot_password/forgot_password_content.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -20,7 +20,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               title: 'Forget your password',
               subTitle: 'Reset a new password to your account',
             ),
-            ForgotPasswordScreenContent(),
+            ForgotPasswordContent(),
           ],
         ),
       ),

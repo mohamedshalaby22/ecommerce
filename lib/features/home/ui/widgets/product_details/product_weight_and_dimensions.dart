@@ -1,9 +1,10 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
+import '../../../../../core/theming/colors.dart';
 
-class ProductDimensions extends StatelessWidget {
-  const ProductDimensions({super.key});
+class ProductWeightAndDimensions extends StatelessWidget {
+  const ProductWeightAndDimensions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class ProductDimensions extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
                     decoration: BoxDecoration(
-                      color: const Color(0x20898121),
+                      color: ColorsManager.lightGreen,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Column(
@@ -51,7 +52,6 @@ class ProductDimensions extends StatelessWidget {
                     ),
                   )),
         ),
-      
       ],
     );
   }

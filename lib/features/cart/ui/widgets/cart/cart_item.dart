@@ -3,7 +3,6 @@ import 'package:ecommerce/core/theming/colors.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-
 import '../../../../../core/widgets/delete_item_background.dart';
 
 class CartItem extends StatelessWidget {
@@ -105,18 +104,18 @@ class CartItem extends StatelessWidget {
           '\$$price',
           style: TextStyles.font16BlackBold,
         ),
-        _buildQuantityRow(),
+        _buildQuantityControl(),
       ],
     );
   }
 
-  Widget _buildQuantityRow() {
+  Widget _buildQuantityControl() {
     return Row(
       children: [
         _buildQuantityButton(
           icon: HugeIcons.strokeRoundedRemove01,
           color: ColorsManager.mainGreen,
-          backgroundColor: const Color(0x38898121),
+          backgroundColor: ColorsManager.lightGreen,
           onTap: onDecrementTap,
         ),
         horizontalSpace(10),

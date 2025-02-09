@@ -1,4 +1,5 @@
 import 'package:ecommerce/features/home/ui/screens/home_screen.dart';
+import 'package:ecommerce/features/profile/ui/screens/profile_screen.dart';
 import 'package:ecommerce/features/wishlist/ui/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
@@ -38,6 +39,6 @@ final List<NavigationItem> navigationItems = [
   NavigationItem(
     label: 'Profile',
     icon: HugeIcons.strokeRoundedUser,
-    page: Container(color: Colors.blue[300]),
+    page: const ProfileScreen(),
   ),
 ];

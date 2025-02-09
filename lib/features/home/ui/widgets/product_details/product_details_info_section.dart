@@ -2,10 +2,10 @@ import 'package:ecommerce/core/constants/app_images.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/theming/styles.dart';
 import 'package:flutter/material.dart';
-import 'product_availability_card.dart';
+import 'product_stock_status_card.dart';
 import 'product_color_selector.dart';
 import 'product_details_buttons.dart';
-import 'product_dimensions.dart';
+import 'product_weight_and_dimensions.dart';
 import 'product_review_list_view.dart';
 
 class ProductDetailsInfoSection extends StatelessWidget {
@@ -24,9 +24,9 @@ class ProductDetailsInfoSection extends StatelessWidget {
           verticalSpace(10),
           _buildDescriptionText(),
           verticalSpace(15),
-          const ProductAvailabilityCard(isAvailable: true),
+          const ProductStockStatusCard(isAvailable: true),
           verticalSpace(20),
-          const ProductDimensions(),
+          const ProductWeightAndDimensions(),
           verticalSpace(20),
           const ProductReviewListView(),
           verticalSpace(20),

@@ -22,7 +22,7 @@ class SignupScreen extends StatelessWidget {
         AppTextButton(
           backgroundColor: Colors.transparent,
           borderColor: ColorsManager.mainGreen,
-          textStyle: TextStyles.font1MainGreenMedium,
+          textStyle: TextStyles.font16MainGreenMedium,
           buttonText: 'Continue as a guest',
           onPressed: () {},
         ),

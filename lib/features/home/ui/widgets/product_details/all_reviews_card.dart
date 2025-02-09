@@ -31,10 +31,11 @@ class AllReviewsCard extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 20,
-                backgroundColor: Color(0x20898121),
+                backgroundColor: ColorsManager.lightGreen,
                 child: HugeIcon(
-                    icon: HugeIcons.strokeRoundedUser,
-                    color: ColorsManager.mainGreen),
+                  icon: HugeIcons.strokeRoundedUser,
+                  color: ColorsManager.mainGreen,
+                ),
               ),
               horizontalSpace(10),
               Expanded(
@@ -53,7 +54,7 @@ class AllReviewsCard extends StatelessWidget {
                 padding: const EdgeInsetsDirectional.only(end: 10),
                 child: SvgPicture.asset(
                   isSelected ? Assets.svgsStarFill : Assets.svgsStarOutline,
-                  width: isSelected?22:27,
+                  width: isSelected ? 22 : 27,
                 ),
               );
             }),

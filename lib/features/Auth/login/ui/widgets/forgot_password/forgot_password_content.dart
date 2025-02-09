@@ -4,8 +4,8 @@ import 'package:ecommerce/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'forgot_password_form.dart';
 
-class ForgotPasswordScreenContent extends StatelessWidget {
-  const ForgotPasswordScreenContent({super.key});
+class ForgotPasswordContent extends StatelessWidget {
+  const ForgotPasswordContent({super.key});
 
   @override
   Widget build(BuildContext context) {

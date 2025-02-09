@@ -60,7 +60,7 @@ class FilterSearchSheetContent extends StatelessWidget {
               child: AppTextButton(
                 backgroundColor: Colors.transparent,
                 borderColor: ColorsManager.mainGreen,
-                textStyle: TextStyles.font1MainGreenMedium,
+                textStyle: TextStyles.font16MainGreenMedium,
                 buttonText: 'Clear All',
                 onPressed: () {},
               ),

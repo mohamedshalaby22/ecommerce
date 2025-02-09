@@ -25,7 +25,7 @@ class ProductReviewCard extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 20,
-                backgroundColor: Color(0x20898121),
+                backgroundColor: ColorsManager.lightGreen,
                 child: HugeIcon(
                     icon: HugeIcons.strokeRoundedUser,
                     color: ColorsManager.mainGreen),

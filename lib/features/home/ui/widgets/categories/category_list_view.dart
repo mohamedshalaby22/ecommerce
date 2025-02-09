@@ -37,7 +37,7 @@ class CategoryListView extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
-        color: isSelected ? ColorsManager.mainGreen : const Color(0x20898121),
+        color: isSelected ? ColorsManager.mainGreen : ColorsManager.lightGreen,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Center(
@@ -45,7 +45,7 @@ class CategoryListView extends StatelessWidget {
           categoriesImages[index],
           colorFilter: ColorFilter.mode(
             isSelected ? Colors.white : ColorsManager.mainGreen,
-            BlendMode.srcIn, 
+            BlendMode.srcIn,
           ),
           width: 36,
         ),
