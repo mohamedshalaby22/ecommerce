@@ -22,28 +22,32 @@ class ProfileOptionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            CircleAvatar(
-                radius: 22,
-                backgroundColor: ColorsManager.lightGreen,
-                child: HugeIcon(
-                  icon: icon,
-                  color: ColorsManager.mainGreen,
-                )),
-            horizontalSpace(10),
-            Text(
-              title,
-              style: TextStyles.font14BlackSemiBold,
-            ),
-            const Spacer(),
-            trailing ??
-                const HugeIcon(
-                  icon: HugeIcons.strokeRoundedArrowRight01,
-                  color: ColorsManager.grey,
-                  size: 28,
-                )
-          ],
+        GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: onTap,
+          child: Row(
+            children: [
+              CircleAvatar(
+                  radius: 22,
+                  backgroundColor: ColorsManager.lightGreen,
+                  child: HugeIcon(
+                    icon: icon,
+                    color: ColorsManager.mainGreen,
+                  )),
+              horizontalSpace(10),
+              Text(
+                title,
+                style: TextStyles.font14BlackSemiBold,
+              ),
+              const Spacer(),
+              trailing ??
+                  const HugeIcon(
+                    icon: HugeIcons.strokeRoundedArrowRight01,
+                    color: ColorsManager.grey,
+                    size: 28,
+                  )
+            ],
+          ),
         ),
         if (isShowDivider)
           const Padding(

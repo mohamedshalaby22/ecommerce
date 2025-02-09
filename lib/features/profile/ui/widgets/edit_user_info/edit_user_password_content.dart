@@ -48,89 +48,94 @@ class _EditUserPasswordContentState extends State<EditUserPasswordContent> {
   final GlobalKey formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Column(
-        children: [
-          verticalSpace(15),
-          AppTextFormField(
-            controller: passwordController,
-            isObscureText: isPasswordObscureText,
-            hintText: 'Password',
-            prefixIcon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: SvgPicture.asset(
-                Assets.svgsLock,
-                fit: BoxFit.contain,
-              ),
-            ),
-            suffixIcon: GestureDetector(
-              onTap: () {
-                setState(() {
-                  isPasswordObscureText = !isPasswordObscureText;
-                });
-              },
-              child: Padding(
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+      ),
+      child: Form(
+        key: formKey,
+        child: Column(
+          children: [
+            verticalSpace(15),
+            AppTextFormField(
+              controller: passwordController,
+              isObscureText: isPasswordObscureText,
+              hintText: 'Password',
+              prefixIcon: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: SvgPicture.asset(
-                  isPasswordObscureText
-                      ? Assets.svgsEyeClosed
-                      : Assets.svgsEyeOpen,
+                  Assets.svgsLock,
                   fit: BoxFit.contain,
                 ),
               ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter a valid password';
-              }
-            },
-          ),
-          verticalSpace(15),
-          PasswordValidations(
-            hasLowerCase: hasLowerCase,
-            hasUpperCase: hasUpperCase,
-            hasSpecialCharacter: hasSpecialCharacter,
-            hasNumber: hasNumber,
-            hasMinLength: hasMinLength,
-          ),
-          verticalSpace(15),
-          AppTextFormField(
-            isObscureText: isPasswordConfirmationObscureText,
-            hintText: 'Confirm Password',
-            prefixIcon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: SvgPicture.asset(
-                Assets.svgsLock,
-                fit: BoxFit.contain,
+              suffixIcon: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isPasswordObscureText = !isPasswordObscureText;
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: SvgPicture.asset(
+                    isPasswordObscureText
+                        ? Assets.svgsEyeClosed
+                        : Assets.svgsEyeOpen,
+                    fit: BoxFit.contain,
+                  ),
+                ),
               ),
-            ),
-            suffixIcon: GestureDetector(
-              onTap: () {
-                setState(() {
-                  isPasswordConfirmationObscureText =
-                      !isPasswordConfirmationObscureText;
-                });
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter a valid password';
+                }
               },
-              child: Padding(
+            ),
+            verticalSpace(15),
+            PasswordValidations(
+              hasLowerCase: hasLowerCase,
+              hasUpperCase: hasUpperCase,
+              hasSpecialCharacter: hasSpecialCharacter,
+              hasNumber: hasNumber,
+              hasMinLength: hasMinLength,
+            ),
+            verticalSpace(15),
+            AppTextFormField(
+              isObscureText: isPasswordConfirmationObscureText,
+              hintText: 'Confirm Password',
+              prefixIcon: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: SvgPicture.asset(
-                  isPasswordConfirmationObscureText
-                      ? Assets.svgsEyeClosed
-                      : Assets.svgsEyeOpen,
+                  Assets.svgsLock,
                   fit: BoxFit.contain,
                 ),
               ),
+              suffixIcon: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isPasswordConfirmationObscureText =
+                        !isPasswordConfirmationObscureText;
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: SvgPicture.asset(
+                    isPasswordConfirmationObscureText
+                        ? Assets.svgsEyeClosed
+                        : Assets.svgsEyeOpen,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter a valid confirmation password';
+                }
+              },
             ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter a valid confirmation password';
-              }
-            },
-          ),
-          verticalSpace(20),
-          AppTextButton(buttonText: 'Save Changes', onPressed: () {}),
-        ],
+            verticalSpace(20),
+            AppTextButton(buttonText: 'Save Changes', onPressed: () {}),
+          ],
+        ),
       ),
     );
   }

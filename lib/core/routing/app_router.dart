@@ -7,10 +7,12 @@ import 'package:ecommerce/features/cart/ui/screens/payment_success_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/categories_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/notifications_screen.dart';
 import 'package:ecommerce/features/home/ui/screens/product_details_screen.dart';
+import 'package:ecommerce/features/profile/ui/screens/vouchers_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/cart/ui/screens/checkout_screen.dart';
 import '../../features/main_navigation_bar/main_navigation_bar.dart';
 import '../../features/onBoarding/ui/on_boarding_screen.dart';
+import '../../features/profile/ui/screens/saved_addresses_screen.dart';
 
 class AppRouter {
   Route? generteRouter(RouteSettings settings) {
@@ -36,6 +38,10 @@ class AppRouter {
         return buildRoute(const CheckoutScreen());
       case Routes.paymentSuceessScreen:
         return buildRoute(const PaymentSuccessScreen());
+      case Routes.vouchersScreen:
+        return buildRoute(const VouchersScreen());
+      case Routes.savedAddressesScreen:
+        return buildRoute(const SavedAddressesScreen());
       default:
         return null;
     }

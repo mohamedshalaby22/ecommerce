@@ -6,7 +6,7 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../widgets/checkout/payment_method_selection.dart';
 import '../widgets/checkout/payment_summary_section.dart';
-import '../widgets/checkout/voucher_card.dart';
+import '../widgets/checkout/voucher_text_form_field.dart';
 import '../widgets/checkout/delivery_address_card.dart';
 
 class CheckoutScreen extends StatelessWidget {
@@ -28,7 +28,7 @@ class CheckoutScreen extends StatelessWidget {
                 PaymentMethodSelection(
                   onSelectPaymentMethod: (String selectedPaymentMethod) {},
                 ),
-                const VoucherCard(),
+                const VoucherTextFormField(),
                 verticalSpace(15),
                 const PaymentSummarySection(),
               ],

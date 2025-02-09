@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../../core/theming/styles.dart';
 
-class VoucherCard extends StatelessWidget {
-  const VoucherCard({super.key});
+class VoucherTextFormField extends StatelessWidget {
+  const VoucherTextFormField({super.key});
 
   @override
   Widget build(BuildContext context) {

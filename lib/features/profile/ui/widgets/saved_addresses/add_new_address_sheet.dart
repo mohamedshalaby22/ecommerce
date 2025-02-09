@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../../../../core/widgets/full_sheet_app_bar.dart';
-import 'edit_user_info_content.dart';
+import 'add_new_address_content.dart';
 
-class EditUserInfoSheet extends StatelessWidget {
-  const EditUserInfoSheet({super.key});
+class AddNewAddressSheet extends StatelessWidget {
+  const AddNewAddressSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,15 @@ class EditUserInfoSheet extends StatelessWidget {
           top: Radius.circular(25),
         ),
       ),
-      child:  SingleChildScrollView(
-        
+      child: const SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           const FullSheetAppBar(
-              title: 'Edit Profile',
-              subTitle: 'Update your personal information',
+            FullSheetAppBar(
+              title: 'Add New Address',
+              subTitle: 'Fill in your address details below',
             ),
-            EditUserInfoContent(),
+            AddNewAddressContent(),
           ],
         ),
       ),

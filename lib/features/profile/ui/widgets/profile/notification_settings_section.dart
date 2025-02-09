@@ -36,13 +36,16 @@ class _NotificationSettingsSectionState
             title: 'Push Notifications',
             onTap: () {},
             isShowDivider: false,
-            trailing: Switch.adaptive(
-                activeColor: ColorsManager.mainGreen,
-                inactiveTrackColor: ColorsManager.lightGreen,
-                value: isAllowed,
-                onChanged: (value) {
-                  toggleNotification();
-                }),
+            trailing: Transform.scale(
+              scale: 0.8,
+              child: Switch.adaptive(
+                  activeColor: ColorsManager.mainGreen,
+                  inactiveTrackColor: ColorsManager.lightGreen,
+                  value: isAllowed,
+                  onChanged: (value) {
+                    toggleNotification();
+                  }),
+            ),
           ),
         ],
       ),

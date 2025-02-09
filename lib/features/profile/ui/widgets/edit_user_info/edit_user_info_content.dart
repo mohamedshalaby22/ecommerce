@@ -20,64 +20,69 @@ class EditUserInfoContent extends StatelessWidget {
       TextEditingController(text: '1023960182');
   @override
   Widget build(BuildContext context) {
-    return Form(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          verticalSpace(10),
-          Text('User Name', style: TextStyles.font14GreyMedium),
-          verticalSpace(10),
-          AppTextFormField(
-            controller: userNameController,
-            hintText: 'Jannis Schmitt',
-            validator: (value) {},
-          ),
-          verticalSpace(15),
-          Text('Email', style: TextStyles.font14GreyMedium),
-          verticalSpace(10),
-          AppTextFormField(
-            controller: emailController,
-            hintText: 'jannis.shmitt123@email.com',
-            validator: (value) {},
-          ),
-          verticalSpace(15),
-          Text('Password', style: TextStyles.font14GreyMedium),
-          verticalSpace(10),
-          AppTextFormField(
-            controller: passwordController,
-            hintText: '123456789',
-            validator: (value) {},
-            isObscureText: true,
-            suffixIcon: GestureDetector(
-              onTap: () {
-                showModalBottomSheet(
-                    isScrollControlled: true,
-                    context: context,
-                    builder: (_) => const EditUserPasswordSheet());
-              },
-              child: const HugeIcon(
-                icon: HugeIcons.strokeRoundedPencilEdit02,
-                color: ColorsManager.mainGreen,
-                size: 22,
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+      ),
+      child: Form(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            verticalSpace(10),
+            Text('User Name', style: TextStyles.font14GreyMedium),
+            verticalSpace(10),
+            AppTextFormField(
+              controller: userNameController,
+              hintText: 'Jannis Schmitt',
+              validator: (value) {},
+            ),
+            verticalSpace(15),
+            Text('Email', style: TextStyles.font14GreyMedium),
+            verticalSpace(10),
+            AppTextFormField(
+              controller: emailController,
+              hintText: 'jannis.shmitt123@email.com',
+              validator: (value) {},
+            ),
+            verticalSpace(15),
+            Text('Password', style: TextStyles.font14GreyMedium),
+            verticalSpace(10),
+            AppTextFormField(
+              controller: passwordController,
+              hintText: '123456789',
+              validator: (value) {},
+              isObscureText: true,
+              suffixIcon: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (_) => const EditUserPasswordSheet());
+                },
+                child: const HugeIcon(
+                  icon: HugeIcons.strokeRoundedPencilEdit02,
+                  color: ColorsManager.mainGreen,
+                  size: 22,
+                ),
               ),
             ),
-          ),
-          verticalSpace(15),
-          Text('Phone Number', style: TextStyles.font14GreyMedium),
-          verticalSpace(10),
-          PhoneNumberFormField(phoneController: phoneController),
-          verticalSpace(25),
-          AppTextButton(buttonText: 'Save Changes', onPressed: () {}),
-          verticalSpace(15),
-          AppTextButton(
-            backgroundColor: ColorsManager.lightRed,
-            textStyle: TextStyles.font16MainGreenMedium
-                .copyWith(color: ColorsManager.red),
-            buttonText: 'Delete Account',
-            onPressed: () {},
-          ),
-          verticalSpace(25),
-        ],
+            verticalSpace(15),
+            Text('Phone Number', style: TextStyles.font14GreyMedium),
+            verticalSpace(10),
+            PhoneNumberFormField(phoneController: phoneController),
+            verticalSpace(25),
+            AppTextButton(buttonText: 'Save Changes', onPressed: () {}),
+            verticalSpace(15),
+            AppTextButton(
+              backgroundColor: ColorsManager.lightRed,
+              textStyle: TextStyles.font16MainGreenMedium
+                  .copyWith(color: ColorsManager.red),
+              buttonText: 'Delete Account',
+              onPressed: () {},
+            ),
+            verticalSpace(25),
+          ],
+        ),
       ),
     );
   }

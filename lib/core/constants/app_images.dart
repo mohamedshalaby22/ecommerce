@@ -110,6 +110,10 @@ class Assets {
   /// assets/svgs/empty-notification-list.svg
   static const String svgsEmptyNotificationList = "assets/svgs/empty-notification-list.svg";
 
+  /// Assets for svgsEmptyVoucherList
+  /// assets/svgs/empty-voucher-list.svg
+  static const String svgsEmptyVoucherList = "assets/svgs/empty-voucher-list.svg";
+
   /// Assets for svgsEmptyWishlist
   /// assets/svgs/empty-wishlist.svg
   static const String svgsEmptyWishlist = "assets/svgs/empty-wishlist.svg";

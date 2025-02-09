@@ -1,3 +1,5 @@
+import 'package:ecommerce/core/helpers/navigation_extension.dart';
+import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/features/profile/ui/widgets/profile/profile_option_card.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
@@ -24,13 +26,17 @@ class ProfileOptionsSection extends StatelessWidget {
           ProfileOptionCard(
             icon: HugeIcons.strokeRoundedGift,
             title: 'Vouchers',
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.vouchersScreen);
+            },
           ),
           ProfileOptionCard(
             icon: HugeIcons.strokeRoundedLocation01,
             title: 'Saved Addresses',
             isShowDivider: false,
-            onTap: () {},
+            onTap: () {
+               context.pushNamed(Routes.savedAddressesScreen);
+            },
           ),
         ],
       ),

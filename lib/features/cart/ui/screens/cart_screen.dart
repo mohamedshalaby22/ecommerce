@@ -28,10 +28,11 @@ class CartScreen extends StatelessWidget {
         elevation: 0.0,
         color: Colors.transparent,
         child: AppTextButton(
-            buttonText: 'Checkout',
-            onPressed: () {
-              context.pushNamed(Routes.checkoutScreen);
-            }),
+          buttonText: 'Checkout',
+          onPressed: () {
+            context.pushNamed(Routes.checkoutScreen);
+          },
+        ),
       ),
     );
   }

@@ -1,9 +1,9 @@
+import 'package:ecommerce/features/profile/ui/widgets/saved_addresses/edit_saved_address_content.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../core/widgets/full_sheet_app_bar.dart';
-import 'edit_user_info_content.dart';
 
-class EditUserInfoSheet extends StatelessWidget {
-  const EditUserInfoSheet({super.key});
+class EditSavedAddressSheet extends StatelessWidget {
+  const EditSavedAddressSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,16 @@ class EditUserInfoSheet extends StatelessWidget {
           top: Radius.circular(25),
         ),
       ),
-      child:  SingleChildScrollView(
+      child: SingleChildScrollView(
         
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           const FullSheetAppBar(
-              title: 'Edit Profile',
-              subTitle: 'Update your personal information',
+             const FullSheetAppBar(
+              title: 'Edit Saved Address',
+              subTitle: 'Update your address details below',
             ),
-            EditUserInfoContent(),
+            EditSavedAddressContent(),
           ],
         ),
       ),
