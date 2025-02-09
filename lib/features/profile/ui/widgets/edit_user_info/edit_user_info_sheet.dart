@@ -19,11 +19,11 @@ class EditUserInfoSheet extends StatelessWidget {
             top: Radius.circular(25),
           ),
         ),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const FullSheetAppBar(
+              FullSheetAppBar(
                 title: 'Edit Profile',
                 subTitle: 'Update your personal information',
               ),

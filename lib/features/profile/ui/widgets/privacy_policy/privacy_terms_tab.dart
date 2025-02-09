@@ -27,13 +27,13 @@ class _PrivacyTermsTabState extends State<PrivacyTermsTab> {
         backgroundColor: ColorsManager.lightGreen,
         groupValue: selectedIndex,
         children: {
-          for (int i = 0; i < tabs.length; i++)
-            i: Padding(
+          for (int index = 0; index < tabs.length; index++)
+            index: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Text(
-                tabs[i],
+                tabs[index],
                 style: TextStyle(
-                  color: selectedIndex == i
+                  color: selectedIndex == index
                       ? Colors.white
                       : ColorsManager.mainGreen,
                   fontFamily: AppConstants.appFontFamily,
