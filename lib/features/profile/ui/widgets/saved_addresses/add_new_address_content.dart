@@ -70,6 +70,7 @@ class AddNewAddressContent extends StatelessWidget {
                   Text('ZIP code', style: TextStyles.font14GreyMedium),
                   verticalSpace(10),
                   AppTextFormField(
+                    isScrollPadding: true,
                     hintText: '123456',
                     validator: (value) {},
                   ),
@@ -93,9 +94,8 @@ class AddNewAddressContent extends StatelessWidget {
             )
           ],
         ),
-        verticalSpace(30),
+        verticalSpace(20),
         const SetDefaultAddressCard(),
-        verticalSpace(10),
         AppTextButton(buttonText: 'Save', onPressed: () {}),
         verticalSpace(30)
       ],

@@ -8,16 +8,33 @@ import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import 'edit_user_password_sheet.dart';
 
-class EditUserInfoContent extends StatelessWidget {
-  EditUserInfoContent({super.key});
+class EditUserInfoContent extends StatefulWidget {
+  const EditUserInfoContent({super.key});
+
+  @override
+  State<EditUserInfoContent> createState() => _EditUserInfoContentState();
+}
+
+class _EditUserInfoContentState extends State<EditUserInfoContent> {
   final TextEditingController userNameController =
       TextEditingController(text: 'Jannis Schmitt');
+
   final TextEditingController emailController =
       TextEditingController(text: 'jannis.shmitt123@email.com');
+
   final TextEditingController passwordController =
       TextEditingController(text: '123456789');
+
   final TextEditingController phoneController =
       TextEditingController(text: '1023960182');
+@override
+  void dispose() {
+   userNameController.dispose();
+   emailController.dispose();
+   passwordController.dispose();
+   phoneController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -65,7 +82,10 @@ class EditUserInfoContent extends StatelessWidget {
           verticalSpace(15),
           Text('Phone Number', style: TextStyles.font14GreyMedium),
           verticalSpace(10),
-          PhoneNumberFormField(phoneController: phoneController,isScrollPadding: true,),
+          PhoneNumberFormField(
+            phoneController: phoneController,
+            isScrollPadding: true,
+          ),
           verticalSpace(25),
           AppTextButton(buttonText: 'Save Changes', onPressed: () {}),
           verticalSpace(15),

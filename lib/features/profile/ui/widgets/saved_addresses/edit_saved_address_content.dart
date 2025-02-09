@@ -5,20 +5,43 @@ import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 
-class EditSavedAddressContent extends StatelessWidget {
-  EditSavedAddressContent({super.key});
+class EditSavedAddressContent extends StatefulWidget {
+  const EditSavedAddressContent({super.key});
+
+  @override
+  State<EditSavedAddressContent> createState() =>
+      _EditSavedAddressContentState();
+}
+
+class _EditSavedAddressContentState extends State<EditSavedAddressContent> {
   final TextEditingController firstNameController =
       TextEditingController(text: 'Frank');
+
   final TextEditingController lastNameController =
       TextEditingController(text: 'Muñoz');
+
   final TextEditingController streetNameController =
       TextEditingController(text: 'Calle 1');
+
   final TextEditingController houseNumberController =
       TextEditingController(text: '12B');
+
   final TextEditingController zipCodeController =
       TextEditingController(text: '123456');
+
   final TextEditingController cityController =
       TextEditingController(text: 'frankfurt');
+  @override
+  void dispose() {
+    firstNameController.dispose();
+    lastNameController.dispose();
+    streetNameController.dispose();
+    houseNumberController.dispose();
+    zipCodeController.dispose();
+    cityController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -85,6 +108,7 @@ class EditSavedAddressContent extends StatelessWidget {
                   Text('ZIP code', style: TextStyles.font14GreyMedium),
                   verticalSpace(10),
                   AppTextFormField(
+                    isScrollPadding: true,
                     controller: zipCodeController,
                     hintText: '123456',
                     validator: (value) {},
@@ -110,14 +134,15 @@ class EditSavedAddressContent extends StatelessWidget {
             )
           ],
         ),
-        verticalSpace(30),
+        verticalSpace(20),
         Row(
           children: [
             Expanded(
               child: AppTextButton(
                 backgroundColor: ColorsManager.lightRed,
-                textStyle: TextStyles.font16MainGreenMedium
-                    .copyWith(color: ColorsManager.red),
+                textStyle: TextStyles.font16MainGreenMedium.copyWith(
+                  color: ColorsManager.red,
+                ),
                 buttonText: 'Delete',
                 onPressed: () {},
               ),
@@ -126,7 +151,7 @@ class EditSavedAddressContent extends StatelessWidget {
             Expanded(child: AppTextButton(buttonText: 'Save', onPressed: () {}))
           ],
         ),
-        verticalSpace(40),
+        verticalSpace(30),
       ],
     );
   }
