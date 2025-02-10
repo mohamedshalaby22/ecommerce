@@ -12,18 +12,23 @@ class EcommerceApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        initialRoute: Routes.mainNavigationBar,
-        onGenerateRoute: appRouter.generteRouter,
-        theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          appBarTheme: const AppBarTheme(
-            elevation: 0.0,
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: Colors.transparent,
-              statusBarBrightness: Brightness.light,
-              statusBarIconBrightness: Brightness.dark,
+      child: GestureDetector(
+        onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: Routes.onboardingScreen,
+          onGenerateRoute: appRouter.generteRouter,
+          theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme: const AppBarTheme(
+              elevation: 0.0,
+              systemOverlayStyle: SystemUiOverlayStyle(
+                statusBarColor: Colors.transparent,
+                statusBarBrightness: Brightness.light,
+                statusBarIconBrightness: Brightness.dark,
+              ),
             ),
           ),
         ),
