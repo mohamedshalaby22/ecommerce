@@ -29,6 +29,7 @@ class OtpPinput extends StatelessWidget {
         textStyle: defaultPinTheme.textStyle!.copyWith(color: Colors.white));
     return Pinput(
       length: 6,
+
       controller: TextEditingController(),
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,

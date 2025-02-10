@@ -47,13 +47,13 @@ class AppRouter {
       case Routes.savedAddressesScreen:
         return buildRoute(const SavedAddressesScreen());
       case Routes.privacyPolicyScreen:
-        return buildRoute( PrivacyPolicyScreen());
+        return buildRoute(PrivacyPolicyScreen());
       case Routes.aboutHeimScreen:
-        return buildRoute( const AboutHeimScreen());
+        return buildRoute(const AboutHeimScreen());
       case Routes.ordersScreen:
-        return buildRoute( const OrdersScreen());
+        return buildRoute(const OrdersScreen());
       case Routes.trackOrderScreen:
-        return buildRoute( const TrackOrderScreen());
+        return buildRoute(const TrackOrderScreen());
       default:
         return null;
     }

@@ -42,7 +42,10 @@ class CheckoutScreen extends StatelessWidget {
         child: AppTextButton(
             buttonText: 'Place Order',
             onPressed: () {
-              context.pushNamed(Routes.paymentSuceessScreen);
+              context.pushNamedAndRemoveUntil(
+                Routes.paymentSuceessScreen,
+                predicate: (route) => false,
+              );
             }),
       ),
     );

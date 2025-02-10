@@ -13,7 +13,6 @@ class OtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -26,9 +25,11 @@ class OtpScreen extends StatelessWidget {
                   verticalSpace(30),
                   const ResendOtpText(),
                   verticalSpace(35),
-                  AppTextButton(buttonText: 'Get Started', onPressed: (){
-                    context.pushNamed(Routes.mainNavigationBar);
-                  })
+                  AppTextButton(
+                      buttonText: 'Get Started',
+                      onPressed: () {
+                        context.pushNamed(Routes.mainNavigationBar);
+                      })
                 ],
               ),
             ),
