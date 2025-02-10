@@ -1,12 +1,12 @@
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/theming/colors.dart';
-import 'package:ecommerce/features/profile/ui/widgets/edit_user_info/edit_user_info_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../../core/theming/styles.dart';
+import '../edit_profile_info/edit_profile_info_sheet.dart';
 
-class UserProfileInfoSection extends StatelessWidget {
-  const UserProfileInfoSection({super.key});
+class ProfileInfoSection extends StatelessWidget {
+  const ProfileInfoSection({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +22,7 @@ class UserProfileInfoSection extends StatelessWidget {
           showModalBottomSheet(
               isScrollControlled: true,
               context: context,
-              builder: (_) => const EditUserInfoSheet());
+              builder: (_) => const EditProfileInfoSheet());
         },
         child: Row(
           children: [

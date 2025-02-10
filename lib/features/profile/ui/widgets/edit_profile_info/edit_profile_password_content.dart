@@ -7,15 +7,15 @@ import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/helpers/app_regex.dart';
 import '../../../../Auth/login/ui/widgets/forgot_password/password_validations.dart';
 
-class EditUserPasswordContent extends StatefulWidget {
-  const EditUserPasswordContent({super.key});
+class EditProfilePasswordContent extends StatefulWidget {
+  const EditProfilePasswordContent({super.key});
 
   @override
-  State<EditUserPasswordContent> createState() =>
-      _EditUserPasswordContentState();
+  State<EditProfilePasswordContent> createState() =>
+      _EditProfilePasswordContentState();
 }
 
-class _EditUserPasswordContentState extends State<EditUserPasswordContent> {
+class _EditProfilePasswordContentState extends State<EditProfilePasswordContent> {
   bool isPasswordObscureText = true;
   bool isPasswordConfirmationObscureText = true;
   TextEditingController passwordController = TextEditingController();

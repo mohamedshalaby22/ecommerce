@@ -11,17 +11,18 @@ class TrackOrderScreen extends StatelessWidget {
     return Scaffold(
       appBar: const SecondaryAppBar(title: 'Track Order'),
       body: SafeArea(
-          child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              verticalSpace(25),
-              const TrackOrderContent(),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              children: [
+                verticalSpace(25),
+                const TrackOrderContent(),
+              ],
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 }

@@ -6,7 +6,7 @@ import '../../../../core/widgets/app_text_button.dart';
 import '../../../../core/widgets/main_appbar.dart';
 import '../widgets/profile/notification_settings_section.dart';
 import '../widgets/profile/profile_support_section.dart';
-import '../widgets/profile/user_profile_info_section.dart';
+import '../widgets/profile/profile_info_section.dart';
 import '../widgets/profile/profile_options_section.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -23,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               children: [
                 verticalSpace(10),
-                const UserProfileInfoSection(),
+                const ProfileInfoSection(),
                 const ProfileOptionsSection(),
                 const NotificationSettingsSection(),
                 const ProfileSupportSection(),

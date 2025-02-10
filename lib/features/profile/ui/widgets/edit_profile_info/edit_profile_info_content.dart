@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
-import 'edit_user_password_sheet.dart';
+import 'edit_profile_password_sheet.dart';
 
-class EditUserInfoContent extends StatefulWidget {
-  const EditUserInfoContent({super.key});
+class EditProfileInfoContent extends StatefulWidget {
+  const EditProfileInfoContent({super.key});
 
   @override
-  State<EditUserInfoContent> createState() => _EditUserInfoContentState();
+  State<EditProfileInfoContent> createState() => _EditProfileInfoContentState();
 }
 
-class _EditUserInfoContentState extends State<EditUserInfoContent> {
+class _EditProfileInfoContentState extends State<EditProfileInfoContent> {
   final TextEditingController userNameController =
       TextEditingController(text: 'Jannis Schmitt');
 

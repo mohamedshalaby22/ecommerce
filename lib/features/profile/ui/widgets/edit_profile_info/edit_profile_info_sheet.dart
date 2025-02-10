@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../../../../core/widgets/full_sheet_app_bar.dart';
-import 'edit_user_info_content.dart';
+import 'edit_profile_info_content.dart';
 
-class EditUserInfoSheet extends StatelessWidget {
-  const EditUserInfoSheet({super.key});
+class EditProfileInfoSheet extends StatelessWidget {
+  const EditProfileInfoSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class EditUserInfoSheet extends StatelessWidget {
                 title: 'Edit Profile',
                 subTitle: 'Update your personal information',
               ),
-              EditUserInfoContent(),
+              EditProfileInfoContent(),
             ],
           ),
         ),

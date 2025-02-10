@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../../core/widgets/full_sheet_app_bar.dart';
-import 'edit_user_password_content.dart';
+import 'edit_profile_password_content.dart';
 
 class EditUserPasswordSheet extends StatelessWidget {
   const EditUserPasswordSheet({super.key});
@@ -28,7 +28,7 @@ class EditUserPasswordSheet extends StatelessWidget {
                 title: 'Change Password',
                 subTitle: 'Update your account’s password for security',
               ),
-              EditUserPasswordContent(),
+              EditProfilePasswordContent(),
             ],
           ),
         ),
