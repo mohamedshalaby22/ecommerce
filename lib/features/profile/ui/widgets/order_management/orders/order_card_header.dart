@@ -1,6 +1,5 @@
 import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/routing/routes.dart';
-import 'package:ecommerce/features/Auth/otp/ui/otp_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../core/theming/colors.dart';
 import '../../../../../../core/theming/styles.dart';

@@ -33,7 +33,11 @@ class PaymentSuccessContent extends StatelessWidget {
           style: TextStyles.font14GreyRegular,
         ),
         verticalSpace(20),
-        AppTextButton(buttonText: 'Track your order', onPressed: () {}),
+        AppTextButton(
+            buttonText: 'Track your order',
+            onPressed: () {
+              context.pushNamed(Routes.trackOrderScreen);
+            }),
         verticalSpace(20),
         AppTextButton(
           backgroundColor: Colors.transparent,

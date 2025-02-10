@@ -18,8 +18,8 @@ class PaymentSuccessScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 verticalSpace(10),
-              const Center(child: PaymentSuccessContent()),
-               verticalSpace(25),
+                const Center(child: PaymentSuccessContent()),
+                verticalSpace(25),
               ],
             ),
           ),
