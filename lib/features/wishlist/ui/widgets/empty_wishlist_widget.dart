@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/theming/styles.dart';
 
-class EmptyWishlist extends StatelessWidget {
-  const EmptyWishlist({super.key});
+class EmptyWishlistWidget extends StatelessWidget {
+  const EmptyWishlistWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(Assets.svgsEmptyWishlist),
+        SvgPicture.asset(Assets.svgsEmptyWishlistImage),
         verticalSpace(20),
         Text(
           'Your Wishlist is Empty',

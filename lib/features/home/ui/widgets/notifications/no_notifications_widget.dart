@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/theming/styles.dart';
 
-class EmptyNotificationList extends StatelessWidget {
-  const EmptyNotificationList({super.key});
+class NoNotificationsWidget extends StatelessWidget {
+  const NoNotificationsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(Assets.svgsEmptyNotificationList,width: 250,),
+        SvgPicture.asset(Assets.svgsNoNotificationsImage,width: 250,),
         verticalSpace(20),
         Text(
           'No Notifications Yet', 

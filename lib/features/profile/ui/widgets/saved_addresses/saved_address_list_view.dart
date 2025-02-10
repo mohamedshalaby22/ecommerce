@@ -1,6 +1,6 @@
 import 'package:ecommerce/features/profile/ui/widgets/saved_addresses/edit_saved_address_sheet.dart';
 import 'package:flutter/material.dart';
-import 'empty_saved_address_list.dart';
+import 'no_saved_address_widget.dart';
 import 'saved_address_card.dart';
 
 class SavedAddressListView extends StatelessWidget {
@@ -11,7 +11,7 @@ class SavedAddressListView extends StatelessWidget {
     return Expanded(
       child: Visibility(
         visible: true,
-        replacement: const EmptySavedAddressList(),
+        replacement: const NoSavedAddressesWidget(),
         child: ListView.builder(
           itemCount: 3,
           itemBuilder: (context, index) => SavedAddressCard(

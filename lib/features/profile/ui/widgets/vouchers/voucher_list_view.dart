@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'empty_voucher_list.dart';
+import 'no_vouchers_widget.dart';
 import 'voucher_card.dart';
 
 class VoucherListView extends StatelessWidget {
@@ -10,7 +10,7 @@ class VoucherListView extends StatelessWidget {
     return Expanded(
       child: Visibility(
         visible: true,
-        replacement: const EmptyVoucherList(),
+        replacement: const NoVouchersWidget(),
         child: ListView.builder(
           itemCount: 3,
           itemBuilder: (context, index) => const VoucherCard(

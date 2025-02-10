@@ -1,4 +1,4 @@
-import 'package:ecommerce/features/home/ui/widgets/notifications/empty_notification_list.dart';
+import 'package:ecommerce/features/home/ui/widgets/notifications/no_notifications_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'notification_card.dart';
@@ -11,7 +11,7 @@ class NotificationListView extends StatelessWidget {
     return Expanded(
         child: Visibility(
       visible: true,
-      replacement: const EmptyNotificationList(),
+      replacement: const NoNotificationsWidget(),
       child: ListView.builder(
         itemCount: 4,
         itemBuilder: (context, index) => NotificationCard(

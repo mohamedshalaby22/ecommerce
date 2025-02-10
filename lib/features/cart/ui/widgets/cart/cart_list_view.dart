@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/constants/app_images.dart';
-import 'package:ecommerce/features/cart/ui/widgets/cart/empty_cart_list.dart';
+import 'package:ecommerce/features/cart/ui/widgets/cart/empty_cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'cart_item.dart';
 
@@ -11,7 +11,7 @@ class CartListView extends StatelessWidget {
     return Expanded(
       child: Visibility(
         visible: true,
-        replacement: const EmptyCartList(),
+        replacement: const EmptyCartWidget(),
         child: ListView.builder(
           itemCount: 3,
           itemBuilder: (context, index) => CartItem(

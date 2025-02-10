@@ -102,21 +102,13 @@ class Assets {
   /// assets/svgs/email.svg
   static const String svgsEmail = "assets/svgs/email.svg";
 
-  /// Assets for svgsEmptyCartList
-  /// assets/svgs/empty-cart-list.svg
-  static const String svgsEmptyCartList = "assets/svgs/empty-cart-list.svg";
+  /// Assets for svgsEmptyCartImage
+  /// assets/svgs/empty-cart-image.svg
+  static const String svgsEmptyCartImage = "assets/svgs/empty-cart-image.svg";
 
-  /// Assets for svgsEmptyNotificationList
-  /// assets/svgs/empty-notification-list.svg
-  static const String svgsEmptyNotificationList = "assets/svgs/empty-notification-list.svg";
-
-  /// Assets for svgsEmptyVoucherList
-  /// assets/svgs/empty-voucher-list.svg
-  static const String svgsEmptyVoucherList = "assets/svgs/empty-voucher-list.svg";
-
-  /// Assets for svgsEmptyWishlist
-  /// assets/svgs/empty-wishlist.svg
-  static const String svgsEmptyWishlist = "assets/svgs/empty-wishlist.svg";
+  /// Assets for svgsEmptyWishlistImage
+  /// assets/svgs/empty-wishlist-image.svg
+  static const String svgsEmptyWishlistImage = "assets/svgs/empty-wishlist-image.svg";
 
   /// Assets for svgsEyeClosed
   /// assets/svgs/eye-closed.svg
@@ -153,6 +145,18 @@ class Assets {
   /// Assets for svgsLock
   /// assets/svgs/lock.svg
   static const String svgsLock = "assets/svgs/lock.svg";
+
+  /// Assets for svgsNoNotificationsImage
+  /// assets/svgs/no-notifications-image.svg
+  static const String svgsNoNotificationsImage = "assets/svgs/no-notifications-image.svg";
+
+  /// Assets for svgsNoOrdersImage
+  /// assets/svgs/no-orders-image.svg
+  static const String svgsNoOrdersImage = "assets/svgs/no-orders-image.svg";
+
+  /// Assets for svgsNoVouchersImage
+  /// assets/svgs/no-vouchers-image.svg
+  static const String svgsNoVouchersImage = "assets/svgs/no-vouchers-image.svg";
 
   /// Assets for svgsPaymentSuccess
   /// assets/svgs/payment-success.svg

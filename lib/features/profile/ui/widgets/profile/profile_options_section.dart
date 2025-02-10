@@ -19,9 +19,11 @@ class ProfileOptionsSection extends StatelessWidget {
       child: Column(
         children: [
           ProfileOptionCard(
-            icon: HugeIcons.strokeRoundedDeliveryBox02,
+            icon: HugeIcons.strokeRoundedDeliveryBox01,
             title: 'My Orders',
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.ordersScreen);
+            },
           ),
           ProfileOptionCard(
             icon: HugeIcons.strokeRoundedGift,
@@ -35,7 +37,7 @@ class ProfileOptionsSection extends StatelessWidget {
             title: 'Saved Addresses',
             isShowDivider: false,
             onTap: () {
-               context.pushNamed(Routes.savedAddressesScreen);
+              context.pushNamed(Routes.savedAddressesScreen);
             },
           ),
         ],

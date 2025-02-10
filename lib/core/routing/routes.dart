@@ -13,4 +13,6 @@ class Routes {
   static const String savedAddressesScreen = '/savedAddressesScreen';
   static const String privacyPolicyScreen = '/privacyPolicyScreen';
   static const String aboutHeimScreen = '/aboutHeimScreen';
+  static const String ordersScreen = '/ordersScreen';
+  static const String trackOrderScreen = '/trackOrderScreen';
 }
