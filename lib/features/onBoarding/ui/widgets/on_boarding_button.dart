@@ -20,7 +20,7 @@ class OnBoardingButton extends StatelessWidget {
               progress: getProgressValue(currentPage),
               activeColor: ColorsManager.mainGreen,
               gapSize: 15,
-              inactiveColor: Colors.grey.withOpacity(0.3),
+              inactiveColor: Colors.grey.withValues(alpha: .3),
             ),
           ),
         ),

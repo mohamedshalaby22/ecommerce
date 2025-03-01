@@ -26,7 +26,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         isSkip: currentPage != 3,
       ),
       body: SafeArea(
-        child: Column(
+        child: Column( 
           children: [
             verticalSpace(5),
             OnBoardingPageView(

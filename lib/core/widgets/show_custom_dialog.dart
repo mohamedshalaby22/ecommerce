@@ -38,7 +38,7 @@ Future<dynamic> showCustomDialog({
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundColor: iconColor.withOpacity(0.2),
+                  backgroundColor: iconColor.withValues(alpha: 0.2),
                   child: Icon(
                     icon,
                     color: iconColor,
