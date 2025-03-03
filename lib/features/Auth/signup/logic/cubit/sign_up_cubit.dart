@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/helpers/token_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -21,19 +22,19 @@ class SignUpCubit extends Cubit<SignupState> {
     emit(const SignupState.loading());
     final response = await _signupRepo.signup(
       SignupRequestBody(
-        firstName: '',
-        lastName: '',
+        firstName: firstNameController.text,
+        lastName: lastNameController.text,
         phone: phoneController.text,
-        email: '',
+        email: emailController.text,
         password: passwordController.text,
       ),
     );
 
     response.when(success: (signupResponse) async {
-      // await TokenStorage.saveTokens(
-      //   accessToken: signupResponse.accessToken,
-      //   refreshToken: signupResponse.refreshToken,
-      // );
+      await TokenStorage.saveTokens(
+        accessToken: signupResponse.access,
+        refreshToken: signupResponse.refresh,
+      );
       emit(SignupState.success(signupResponse));
     }, failure: (error) {
       emit(SignupState.error(error: error.toString()));

@@ -1,3 +1,3 @@
 class SignupApiConstants {
-  static const String signup = '/auth/users/';
+  static const String signup = '/auth/api/users/';
 }

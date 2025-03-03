@@ -3,6 +3,8 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+import '../helpers/token_storage.dart';
+
 class DioFactory {
   DioFactory._();
   static Dio? dio;
@@ -13,7 +15,7 @@ class DioFactory {
       dio!..options.connectTimeout = timeOut;
       dio!..options.receiveTimeout = timeOut;
       addDioInterceptor();
-      // addDioHeaders();
+      addDioHeaders();
       return dio!;
     } else {
       return dio!;
@@ -34,10 +36,10 @@ class DioFactory {
     );
   }
 
-  // static void addDioHeaders() async {
-  //   // String? accessToken = await TokenStorage.getAccessToken();
-  //   dio?.options.headers = {
-  //     'Authorization': 'Bearer $accessToken',
-  //   };
-  // }
+  static void addDioHeaders() async {
+    String? accessToken = await TokenStorage.getAccessToken();
+    dio?.options.headers = {
+      'Authorization': 'Bearer $accessToken',
+    };
+  }
 }

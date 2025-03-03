@@ -13,10 +13,13 @@ import 'package:ecommerce/features/profile/ui/screens/privacy_policy_screen.dart
 import 'package:ecommerce/features/profile/ui/screens/track_order_screen.dart';
 import 'package:ecommerce/features/profile/ui/screens/vouchers_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/Auth/signup/logic/cubit/sign_up_cubit.dart';
 import '../../features/cart/ui/screens/checkout_screen.dart';
 import '../../features/main_navigation_bar/main_navigation_bar.dart';
 import '../../features/onBoarding/ui/on_boarding_screen.dart';
 import '../../features/profile/ui/screens/saved_addresses_screen.dart';
+import '../di/dependency_injection.dart';
 
 class AppRouter {
   Route? generteRouter(RouteSettings settings) {
@@ -24,7 +27,10 @@ class AppRouter {
       case Routes.onboardingScreen:
         return buildRoute(const OnBoardingScreen());
       case Routes.loginScreen:
-        return buildRoute(const LoginScreen());
+        return buildRoute(BlocProvider(
+          create: (BuildContext context) => SignUpCubit(getIt()),
+          child: const LoginScreen(),
+        ));
       case Routes.forgotPasswordScreen:
         return buildRoute(const ForgotPasswordScreen());
       case Routes.otpScreen:
