@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +19,9 @@ class EcommerceApp extends StatelessWidget {
         },
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: Routes.mainNavigationBar,
+          initialRoute: AppConstants.isLoggedIn
+              ? Routes.mainNavigationBar
+              : Routes.onboardingScreen,
           onGenerateRoute: appRouter.generteRouter,
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.white,

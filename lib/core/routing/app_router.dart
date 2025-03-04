@@ -1,5 +1,6 @@
 import 'package:ecommerce/core/routing/route_helpers.dart';
 import 'package:ecommerce/core/routing/routes.dart';
+import 'package:ecommerce/features/Auth/login/logic/cubit/login_cubit.dart';
 import 'package:ecommerce/features/Auth/login/ui/screens/forgot_password_screen.dart';
 import 'package:ecommerce/features/Auth/login/ui/screens/login_screen.dart';
 import 'package:ecommerce/features/Auth/otp/ui/otp_screen.dart';
@@ -28,7 +29,7 @@ class AppRouter {
         return buildRoute(const OnBoardingScreen());
       case Routes.loginScreen:
         return buildRoute(BlocProvider(
-          create: (BuildContext context) => SignUpCubit(getIt()),
+          create: (BuildContext context) => LoginCubit(getIt()),
           child: const LoginScreen(),
         ));
       case Routes.forgotPasswordScreen:

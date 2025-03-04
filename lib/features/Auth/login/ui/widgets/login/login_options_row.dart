@@ -26,9 +26,9 @@ class _LoginOptionsRowState extends State<LoginOptionsRow> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        _buildKeepLoggedInCheckbox(),
+        // _buildKeepLoggedInCheckbox(),
         GestureDetector(
           onTap: () {
             context.pushNamed(Routes.forgotPasswordScreen);

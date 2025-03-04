@@ -47,7 +47,7 @@ class PhoneNumberFormField extends StatelessWidget {
                   keyboardType: TextInputType.phone,
                   inputFormatters: [
                     FilteringTextInputFormatter.deny(RegExp('^49+')),
-                    LengthLimitingTextInputFormatter(13),
+                    LengthLimitingTextInputFormatter(11),
                   ],
                   cursorColor: ColorsManager.mainGreen,
                   cursorHeight: 18,

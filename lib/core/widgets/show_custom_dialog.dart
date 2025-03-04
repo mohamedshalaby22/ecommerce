@@ -58,6 +58,8 @@ Future<dynamic> showCustomDialog({
                       verticalSpace(3),
                       Text(
                         message,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyles.font16BlackBold,
                       ),
                     ],

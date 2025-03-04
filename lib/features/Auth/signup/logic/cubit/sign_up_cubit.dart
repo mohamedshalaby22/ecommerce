@@ -1,4 +1,5 @@
 import 'package:ecommerce/core/helpers/token_storage.dart';
+import 'package:ecommerce/core/networking/api_error_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -24,7 +25,7 @@ class SignUpCubit extends Cubit<SignupState> {
       SignupRequestBody(
         firstName: firstNameController.text,
         lastName: lastNameController.text,
-        phone: phoneController.text,
+        phone: '+20${phoneController.text}',
         email: emailController.text,
         password: passwordController.text,
       ),
@@ -36,8 +37,8 @@ class SignUpCubit extends Cubit<SignupState> {
         refreshToken: signupResponse.refresh,
       );
       emit(SignupState.success(signupResponse));
-    }, failure: (error) {
-      emit(SignupState.error(error: error.toString()));
+    }, failure: (apiErrorModel) {
+      emit(SignupState.error(apiErrorModel));
     });
   }
 }

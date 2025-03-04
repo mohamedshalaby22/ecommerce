@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/networking/api_error_handler.dart';
 import 'package:ecommerce/core/networking/api_result.dart';
 import 'package:ecommerce/features/Auth/signup/data/apis/signup_api_service.dart';
 import '../models/signup_request_body.dart';
@@ -12,7 +13,7 @@ class SignupRepo {
       final response = await _signupApiService.signup(signupRequestBody);
       return ApiResult.success(response);
     } catch (error) {
-      return ApiResult.failure(error.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }
 }
