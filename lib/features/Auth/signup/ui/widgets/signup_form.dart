@@ -1,11 +1,9 @@
 import 'package:ecommerce/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/widgets/phone_number_form_field.dart';
-import '../../logic/cubit/sign_up_cubit.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});
@@ -17,15 +15,23 @@ class SignupForm extends StatefulWidget {
 class _SignupFormState extends State<SignupForm> {
   bool isPasswordObscureText = true;
   bool isPasswordConfirmationObscureText = true;
+  final formKey = GlobalKey<FormState>();
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<SignUpCubit>().formKey,
+      key: formKey,
       child: Column(
         children: [
           AppTextFormField(
             hintText: 'First Name',
-            controller: context.read<SignUpCubit>().firstNameController,
+            controller: firstNameController,
             prefixIcon: Padding(
               padding: const EdgeInsets.all(12.0),
               child: SvgPicture.asset(
@@ -42,7 +48,7 @@ class _SignupFormState extends State<SignupForm> {
           verticalSpace(15),
           AppTextFormField(
             hintText: 'Last Name',
-            controller: context.read<SignUpCubit>().lastNameController,
+            controller: lastNameController,
             prefixIcon: Padding(
               padding: const EdgeInsets.all(12.0),
               child: SvgPicture.asset(
@@ -58,12 +64,12 @@ class _SignupFormState extends State<SignupForm> {
           ),
           verticalSpace(15),
           PhoneNumberFormField(
-            phoneController: context.read<SignUpCubit>().phoneController,
+            phoneController: phoneController,
           ),
           verticalSpace(15),
           AppTextFormField(
             hintText: 'Email',
-            controller: context.read<SignUpCubit>().emailController,
+            controller: emailController,
             textInputType: TextInputType.emailAddress,
             prefixIcon: Padding(
               padding: const EdgeInsets.all(12.0),
@@ -80,7 +86,7 @@ class _SignupFormState extends State<SignupForm> {
           ),
           verticalSpace(15),
           AppTextFormField(
-            controller: context.read<SignUpCubit>().passwordController,
+            controller: passwordController,
             isObscureText: isPasswordObscureText,
             hintText: 'Password',
             prefixIcon: Padding(

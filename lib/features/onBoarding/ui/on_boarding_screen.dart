@@ -1,7 +1,6 @@
 import 'package:ecommerce/core/helpers/navigation_extension.dart';
 import 'package:ecommerce/core/helpers/spacing.dart';
 import 'package:ecommerce/core/routing/routes.dart';
-import 'package:ecommerce/core/widgets/app_snack_bar.dart';
 import 'package:ecommerce/features/onBoarding/ui/widgets/on_boarding_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

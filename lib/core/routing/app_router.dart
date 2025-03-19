@@ -1,6 +1,5 @@
 import 'package:ecommerce/core/routing/route_helpers.dart';
 import 'package:ecommerce/core/routing/routes.dart';
-import 'package:ecommerce/features/Auth/login/logic/cubit/login_cubit.dart';
 import 'package:ecommerce/features/Auth/login/ui/screens/forgot_password_screen.dart';
 import 'package:ecommerce/features/Auth/login/ui/screens/login_screen.dart';
 import 'package:ecommerce/features/Auth/otp/ui/otp_screen.dart';
@@ -14,13 +13,10 @@ import 'package:ecommerce/features/profile/ui/screens/privacy_policy_screen.dart
 import 'package:ecommerce/features/profile/ui/screens/track_order_screen.dart';
 import 'package:ecommerce/features/profile/ui/screens/vouchers_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../features/Auth/signup/logic/cubit/sign_up_cubit.dart';
 import '../../features/cart/ui/screens/checkout_screen.dart';
 import '../../features/main_navigation_bar/main_navigation_bar.dart';
 import '../../features/onBoarding/ui/on_boarding_screen.dart';
 import '../../features/profile/ui/screens/saved_addresses_screen.dart';
-import '../di/dependency_injection.dart';
 
 class AppRouter {
   Route? generteRouter(RouteSettings settings) {
@@ -28,10 +24,7 @@ class AppRouter {
       case Routes.onboardingScreen:
         return buildRoute(const OnBoardingScreen());
       case Routes.loginScreen:
-        return buildRoute(BlocProvider(
-          create: (BuildContext context) => LoginCubit(getIt()),
-          child: const LoginScreen(),
-        ));
+        return buildRoute(const LoginScreen());
       case Routes.forgotPasswordScreen:
         return buildRoute(const ForgotPasswordScreen());
       case Routes.otpScreen:
